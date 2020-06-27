@@ -1,0 +1,28 @@
+:root {
+  --bg-color: #fff;
+  --text-color: #000;
+}
+
+[data-theme='dark'] {
+  --bg-color: #000;
+  --text-color: #fff;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
