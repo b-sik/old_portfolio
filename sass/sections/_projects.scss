@@ -2,6 +2,11 @@
   grid-column: 1 / -1;
   grid-row: projects-start / projects-end;
 
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 15rem 1fr 15rem;
+  grid-row-gap: 5rem;
+
   background-image: linear-gradient(rgba(teal, 0.8), rgba(teal, 0.8)),
     url(/img/forest-bg.jpg);
   background-size: cover;
@@ -10,5 +15,43 @@
 
   & > * {
     transform: skewY(4deg);
+  }
+
+  &__description {
+    grid-column: 2 / -2;
+    align-self: end;
+
+    display: flex;
+    align-items: center;
+
+    color: #fff;
+
+    & i {
+      font-size: 4rem;
+      margin-right: 1rem;
+    }
+
+    & h2 {
+      font-size: 4rem;
+    }
+
+    & p {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+  }
+
+  &__cards {
+    grid-column: 2 / -2;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10rem;
+
+    & .card {
+      background-color: #fff;
+      height: 40rem;
+    }
   }
 }

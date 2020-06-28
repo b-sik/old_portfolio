@@ -22,7 +22,7 @@ body {
   font-family: 'Roboto', sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: [nav-start] 6rem [nav-end header-start] 80vh [header-end projects-start] minmax(100vh, min-content) [projects-end]; }
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end]; }
 
 .nav {
   grid-column: 1 / -1;
@@ -161,8 +161,35 @@ body {
 .projects {
   grid-column: 1 / -1;
   grid-row: projects-start / projects-end;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 15rem 1fr 15rem;
+  grid-row-gap: 5rem;
   background-image: linear-gradient(rgba(0, 128, 128, 0.8), rgba(0, 128, 128, 0.8)), url(/img/forest-bg.jpg);
   background-size: cover;
   transform: skewY(-4deg); }
   .projects > * {
     transform: skewY(4deg); }
+  .projects__description {
+    grid-column: 2 / -2;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    color: #fff; }
+    .projects__description i {
+      font-size: 4rem;
+      margin-right: 1rem; }
+    .projects__description h2 {
+      font-size: 4rem; }
+    .projects__description p {
+      font-size: 2rem;
+      font-weight: 300; }
+  .projects__cards {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 10rem; }
+    .projects__cards .card {
+      background-color: #fff;
+      height: 40rem; }

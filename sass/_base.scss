@@ -27,7 +27,7 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
-    [nav-start] 6rem [nav-end header-start] 80vh [header-end projects-start] minmax(
+    [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(
       100vh,
       min-content
     )
