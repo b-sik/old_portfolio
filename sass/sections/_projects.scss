@@ -1,0 +1,14 @@
+.projects {
+  grid-column: 1 / -1;
+  grid-row: projects-start / projects-end;
+
+  background-image: linear-gradient(rgba(teal, 0.8), rgba(teal, 0.8)),
+    url(/img/forest-bg.jpg);
+  background-size: cover;
+
+  transform: skewY(-4deg);
+
+  & > * {
+    transform: skewY(4deg);
+  }
+}

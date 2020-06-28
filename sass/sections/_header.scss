@@ -1,30 +1,31 @@
 .header {
   grid-column: 3 / 11;
+  grid-row: header-start / header-end;
 
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 1fr 1fr min-content 1fr 1fr;
+  grid-template-rows: 1fr 1fr min-content 1fr 1fr 1fr;
   align-items: center;
-
-  // background-color: khaki;
-
-  height: 70vh;
 
   font-size: 3rem;
 
   &__left {
+    grid-column: 2 / 9;
+    grid-row: 3 / 4;
+
     display: grid;
     grid-row-gap: 2rem;
     justify-items: center;
-
-    // background-color: lightcoral;
-    grid-column: 2 / 9;
-    grid-row: 3 / 4;
 
     text-align: center;
 
     & h1 {
       font-weight: 400;
+      line-height: 1;
+    }
+
+    & p {
+      font-weight: 300;
     }
 
     & .tech-icons-ul {
@@ -35,7 +36,10 @@
 
       list-style: none;
 
-      &__figure {
+      & .tech-icon {
+        transition: 0.2s;
+        cursor: default;
+
         & i {
           font-size: 4rem;
           margin-bottom: 0.5rem;
@@ -59,10 +63,23 @@
           }
           &-react {
             color: teal;
+            animation: rotate360 5s linear 0s infinite normal forwards;
+            animation-play-state: paused;
+
+            &:hover {
+              animation-play-state: running;
+            }
+          }
+          &-node-js {
+            color: yellowgreen;
           }
           &-git-alt {
             color: darkviolet;
           }
+        }
+
+        &:hover {
+          transform: scale(1.2);
         }
       }
     }
@@ -98,6 +115,39 @@
       object-fit: cover;
       display: block;
       filter: sepia(25%);
+    }
+  }
+
+  & .learn-more {
+    grid-row: 5 / 7;
+    grid-column: 1 / -1;
+    justify-self: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & p {
+      font-size: 2rem;
+      font-weight: 300;
+    }
+
+    & i {
+      font-size: 3rem;
+    }
+
+    &:link,
+    &:visited,
+    &:active {
+      color: #000;
+      text-decoration: none;
+    }
+
+    &:hover {
+      cursor: pointer;
+      & i {
+        animation: up-and-down 0.75s ease-in-out 0s infinite;
+      }
     }
   }
 }

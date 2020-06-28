@@ -1,10 +1,10 @@
 .nav {
   grid-column: 1 / -1;
+  grid-row: nav-start / nav-end;
 
   display: flex;
   justify-content: flex-end;
 
-  height: 6rem;
   background-color: #cd5c5c;
 
   font-size: 2rem;
@@ -27,8 +27,16 @@
 
       &:hover {
         cursor: pointer;
-
         background-color: rgba(#fff, 0.2);
+      }
+
+      & a {
+        &:link,
+        &:visited,
+        &:active {
+          text-decoration: none;
+          color: #fff;
+        }
       }
     }
   }
