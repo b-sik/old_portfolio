@@ -64,6 +64,67 @@ body {
   100% {
     transform: rotate(360deg); } }
 
+.card {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  row-gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
+  transition: all 0.2s;
+  backface-visibility: hidden; }
+  .card:hover {
+    transform: scale(1.1); }
+  .card figure {
+    grid-row: 1 / 2; }
+    .card figure img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block; }
+  .card p {
+    align-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem; }
+  .card a {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.5rem;
+    background-color: indianred;
+    padding: 1.5rem; }
+    .card a:hover {
+      cursor: pointer;
+      background-color: rgba(205, 92, 92, 0.8); }
+
+.tech-icon {
+  cursor: default;
+  text-align: center; }
+  .tech-icon i {
+    font-size: 4rem;
+    margin-bottom: 0.5rem; }
+  .tech-icon figcaption {
+    font-size: 1rem; }
+  .tech-icon .fa-html5 {
+    color: orangered; }
+  .tech-icon .fa-css3-alt {
+    color: royalblue; }
+  .tech-icon .fa-sass {
+    color: crimson; }
+  .tech-icon .fa-js-square {
+    color: darkorange; }
+  .tech-icon .fa-react {
+    color: teal;
+    animation: rotate360 5s linear 0s infinite normal forwards;
+    animation-play-state: paused; }
+    .tech-icon .fa-react:hover {
+      animation-play-state: running; }
+  .tech-icon .fa-node-js {
+    color: yellowgreen; }
+  .tech-icon .fa-git-alt {
+    color: darkviolet; }
+
 .header {
   grid-column: 3 / 11;
   grid-row: header-start / header-end;
@@ -84,38 +145,14 @@ body {
       line-height: 1; }
     .header__left p {
       font-weight: 300; }
-    .header__left .tech-icons-ul {
+    .header__left ul {
       display: flex;
       justify-content: space-around;
       width: 80%;
       list-style: none; }
-      .header__left .tech-icons-ul .tech-icon {
-        transition: 0.2s;
-        cursor: default; }
-        .header__left .tech-icons-ul .tech-icon i {
-          font-size: 4rem;
-          margin-bottom: 0.5rem; }
-        .header__left .tech-icons-ul .tech-icon figcaption {
-          font-size: 1rem; }
-        .header__left .tech-icons-ul .tech-icon .fa-html5 {
-          color: orangered; }
-        .header__left .tech-icons-ul .tech-icon .fa-css3-alt {
-          color: royalblue; }
-        .header__left .tech-icons-ul .tech-icon .fa-sass {
-          color: crimson; }
-        .header__left .tech-icons-ul .tech-icon .fa-js-square {
-          color: darkorange; }
-        .header__left .tech-icons-ul .tech-icon .fa-react {
-          color: teal;
-          animation: rotate360 5s linear 0s infinite normal forwards;
-          animation-play-state: paused; }
-          .header__left .tech-icons-ul .tech-icon .fa-react:hover {
-            animation-play-state: running; }
-        .header__left .tech-icons-ul .tech-icon .fa-node-js {
-          color: yellowgreen; }
-        .header__left .tech-icons-ul .tech-icon .fa-git-alt {
-          color: darkviolet; }
-        .header__left .tech-icons-ul .tech-icon:hover {
+      .header__left ul .tech-icon {
+        transition: 0.2s; }
+        .header__left ul .tech-icon:hover {
           transform: scale(1.2); }
   .header__img {
     grid-column: 8 / 12;
@@ -188,8 +225,5 @@ body {
     grid-column: 2 / -2;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content;
     grid-gap: 10rem; }
-    .projects__cards .card {
-      background-color: #fff;
-      height: 40rem; }

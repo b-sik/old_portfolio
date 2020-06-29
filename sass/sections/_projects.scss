@@ -46,12 +46,7 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: min-content;
     grid-gap: 10rem;
-
-    & .card {
-      background-color: #fff;
-      height: 40rem;
-    }
   }
 }

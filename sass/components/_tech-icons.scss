@@ -1,0 +1,42 @@
+.tech-icon {
+  cursor: default;
+  text-align: center;
+
+  & i {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+  }
+  & figcaption {
+    font-size: 1rem;
+  }
+
+  & .fa {
+    &-html5 {
+      color: orangered;
+    }
+    &-css3-alt {
+      color: royalblue;
+    }
+    &-sass {
+      color: crimson;
+    }
+    &-js-square {
+      color: darkorange;
+    }
+    &-react {
+      color: teal;
+      animation: rotate360 5s linear 0s infinite normal forwards;
+      animation-play-state: paused;
+
+      &:hover {
+        animation-play-state: running;
+      }
+    }
+    &-node-js {
+      color: yellowgreen;
+    }
+    &-git-alt {
+      color: darkviolet;
+    }
+  }
+}
