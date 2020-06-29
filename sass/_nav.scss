@@ -36,6 +36,10 @@
         &:active {
           text-decoration: none;
           color: #fff;
+
+          & i {
+            margin-right: 1rem;
+          }
         }
       }
     }

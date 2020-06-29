@@ -1,0 +1,19 @@
+.hundred-days {
+  grid-row: hundred-days-start / hundred-days-end;
+  grid-column: 1 / -1;
+
+  margin: -5rem 0;
+  z-index: -10;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h2 {
+    font-family: monospace;
+    font-weight: 400;
+
+    font-size: 6rem;
+    color: chartreuse;
+  }
+}

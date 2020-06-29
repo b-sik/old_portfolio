@@ -1,16 +1,28 @@
-document.addEventListener('DOMContentLoaded', (e) => {
-  // intialize with light theme
-  document.documentElement.setAttribute('data-theme', 'light');
+// parascroll.js
+document.addEventListener('DOMContentLoaded', function () {
+  var CLASS_NAME = '.parallax-bg';
+  var ATTR_NAME = 'data-bgurl';
+  var SCROLL_SPEED = 0.6;
 
-  // grab button
-  const themeSwitcher = document.getElementById('theme-switcher');
-
-  themeSwitcher.addEventListener('click', () => {
-    // select current theme
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    // switch theme
-    const switchToTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    // change attribute
-    document.documentElement.setAttribute('data-theme', switchToTheme);
-  });
+  var elements = document.querySelectorAll(CLASS_NAME);
+  var targets = [];
+  for (var i = 0; i < elements.length; i++) {
+    var elem = elements[i];
+    var url = elem.getAttribute(ATTR_NAME);
+    if (url) {
+      elem.style.backgroundImage = "url('" + url + "')";
+      elem.style.backgroundAttachment = 'fixed';
+      elem.style.backgroundSize = 'cover';
+      targets.push(elem);
+    }
+  }
+  var callback = function () {
+    for (var i = 0; i < targets.length; i++) {
+      var rekt = targets[i].getBoundingClientRect();
+      targets[i].style.backgroundPosition =
+        '50%' + rekt.top * SCROLL_SPEED + 'px';
+    }
+  };
+  window.onscroll = callback;
+  callback();
 });
