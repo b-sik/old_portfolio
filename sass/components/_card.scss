@@ -9,6 +9,7 @@
   transition: all 0.2s;
 
   backface-visibility: hidden;
+  overflow: hidden;
 
   &:hover {
     transform: scale(1.1);
@@ -36,12 +37,22 @@
   }
 
   & a {
-    color: #fff;
     text-align: center;
     font-weight: 300;
     font-size: 1.5rem;
     background-color: indianred;
     padding: 1.5rem;
+
+    & i {
+      margin-left: 1rem;
+    }
+
+    &:link,
+    &:visited,
+    &:active {
+      text-decoration: none;
+      color: #fff;
+    }
 
     &:hover {
       cursor: pointer;

@@ -71,7 +71,8 @@ body {
   background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  overflow: hidden; }
   .card:hover {
     transform: scale(1.1); }
   .card figure {
@@ -88,12 +89,16 @@ body {
     margin-left: 2rem;
     margin-right: 2rem; }
   .card a {
-    color: #fff;
     text-align: center;
     font-weight: 300;
     font-size: 1.5rem;
     background-color: indianred;
     padding: 1.5rem; }
+    .card a i {
+      margin-left: 1rem; }
+    .card a:link, .card a:visited, .card a:active {
+      text-decoration: none;
+      color: #fff; }
     .card a:hover {
       cursor: pointer;
       background-color: rgba(205, 92, 92, 0.8); }
