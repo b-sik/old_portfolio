@@ -1,12 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
-:root {
-  --bg-color: #fff;
-  --text-color: #000; }
-
-[data-theme='dark'] {
-  --bg-color: #000;
-  --text-color: #fff; }
-
 *,
 *::before,
 *::after {
@@ -22,7 +14,7 @@ body {
   font-family: 'Roboto', sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end hundred-days-start] 50vh [hundred-days-end certifications-start] 100vh [certifications-end]; }
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end hundred-days-start] min-content [hundred-days-end certifications-start] 100vh [certifications-end]; }
 
 .nav {
   grid-column: 1 / -1;
@@ -135,21 +127,36 @@ body {
 .hundred-days {
   grid-row: hundred-days-start / hundred-days-end;
   grid-column: 1 / -1;
-  margin: -5rem 0;
   z-index: -10;
   display: flex;
   justify-content: center;
-  align-items: center; }
-  .hundred-days h2 {
-    font-family: monospace;
-    font-weight: 400;
-    font-size: 6rem;
-    color: chartreuse; }
+  align-items: center;
+  margin: -5rem 0; }
+  .hundred-days-container {
+    padding: 12rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .hundred-days-container h2 {
+      font-family: monospace;
+      font-weight: 400;
+      font-size: 6rem;
+      color: chartreuse;
+      margin-bottom: 2rem; }
+    .hundred-days-container p {
+      font-family: monospace;
+      text-align: center;
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 2rem;
+      padding: 1rem 10%;
+      background-color: rgba(0, 0, 0, 0.5); }
 
 .certifications {
   grid-row: certifications-start / certifications-end;
   grid-column: 1 / -1;
-  background-image: linear-gradient(rgba(205, 133, 63, 0.8), rgba(205, 133, 63, 0.8)), url(/img/desert-bg.jpg);
+  background-image: linear-gradient(rgba(205, 133, 63, 0.9), rgba(205, 133, 63, 0.9)), url(/img/birch-bg.jpg);
   background-size: cover;
   transform: skewY(-4deg); }
   .certifications > * {
