@@ -19,7 +19,7 @@
     align-items: center;
 
     h2 {
-      font-family: monospace;
+      // font-family: monospace;
       font-weight: 400;
 
       font-size: 6rem;
@@ -29,16 +29,17 @@
     }
 
     p {
-      font-family: monospace;
+      // font-family: monospace;
+      font-weight: 300;
       text-align: center;
 
       font-size: 2rem;
       color: #fff;
 
       margin-bottom: 2rem;
-      padding: 1rem 10%;
+      padding: 1rem 15%;
 
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.6);
     }
   }
 }

@@ -139,19 +139,18 @@ body {
     justify-content: center;
     align-items: center; }
     .hundred-days-container h2 {
-      font-family: monospace;
       font-weight: 400;
       font-size: 6rem;
       color: chartreuse;
       margin-bottom: 2rem; }
     .hundred-days-container p {
-      font-family: monospace;
+      font-weight: 300;
       text-align: center;
       font-size: 2rem;
       color: #fff;
       margin-bottom: 2rem;
-      padding: 1rem 10%;
-      background-color: rgba(0, 0, 0, 0.5); }
+      padding: 1rem 15%;
+      background-color: rgba(0, 0, 0, 0.6); }
 
 .certifications {
   grid-row: certifications-start / certifications-end;
