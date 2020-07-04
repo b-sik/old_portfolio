@@ -26,3 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
   window.onscroll = callback;
   callback();
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var elems = document.querySelectorAll('.collapsible');
+  var instances = M.Collapsible.init(elems);
+});

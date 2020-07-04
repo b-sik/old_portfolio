@@ -157,9 +157,59 @@ body {
   grid-column: 1 / -1;
   background-image: linear-gradient(rgba(205, 133, 63, 0.9), rgba(205, 133, 63, 0.9)), url(/img/birch-bg.jpg);
   background-size: cover;
-  transform: skewY(-4deg); }
+  transform: skewY(-4deg);
+  display: grid;
+  grid-template-rows: 15rem 1fr 15rem;
+  grid-template-columns: repeat(12, 1fr); }
   .certifications > * {
     transform: skewY(4deg); }
+  .certifications__description {
+    grid-column: -2 / 2;
+    justify-self: end;
+    align-self: end;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    color: #fff; }
+    .certifications__description i {
+      font-size: 5rem;
+      margin-left: 1rem; }
+    .certifications__description h2 {
+      font-size: 4rem; }
+    .certifications__description p {
+      font-size: 2rem;
+      font-weight: 300; }
+  .certifications .certificates {
+    grid-column: 2 / -2;
+    grid-row: 2 / 3;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    text-align: center;
+    font-size: 2rem; }
+    .certifications .certificates label {
+      cursor: pointer;
+      width: 100%;
+      border: 1px solid black;
+      padding: 1rem 0;
+      margin-top: 1rem;
+      background-color: #fff; }
+    .certifications .certificates .toggler {
+      display: none; }
+    .certifications .certificates .toggler + .toggler-content {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out; }
+    .certifications .certificates .toggler:checked + .toggler-content {
+      max-height: 1000px;
+      opacity: 1;
+      width: 100%;
+      border: 1px solid black;
+      background-color: #ff; }
 
 .header {
   grid-column: 3 / 11;
