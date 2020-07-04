@@ -1,0 +1,126 @@
+.certificate {
+  width: 100%;
+
+  text-align: center;
+  font-size: 2rem;
+
+  &__label {
+    cursor: pointer;
+
+    width: 100%;
+    display: block;
+
+    border: 1px solid black;
+    padding: 1rem 0;
+    margin-top: 1rem;
+    background-color: #fff;
+  }
+
+  .toggler {
+    display: none;
+
+    & + .certificate__info {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: all 0.2s ease-in-out;
+    }
+
+    &:checked + .certificate__info {
+      max-height: 40rem;
+      opacity: 1;
+    }
+  }
+
+  &__info {
+    width: 100%;
+    border: 1px solid black;
+    background-color: #fff;
+
+    padding: 1rem 0;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+
+    &--link {
+      grid-column: 1 / 2;
+      grid-row: 1 / 3;
+
+      & img {
+        height: auto;
+        width: 100%;
+        max-height: 40rem;
+      }
+    }
+
+    &--skills {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      h3 {
+        // margin-bottom: 2rem;
+      }
+
+      .skills-tech-icon-list {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+
+        width: 80%;
+      }
+
+      .tech-icon i {
+        font-size: 5rem;
+      }
+
+      .tech-icon:hover {
+        transform: none;
+      }
+
+      .skills-other-list {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+
+        width: 80%;
+
+        & i {
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    &--projects {
+      height: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        width: 80%;
+
+        font-size: 2rem;
+
+        li {
+          margin: 0.5rem 0;
+          padding: 0.5rem 1rem;
+          border: 1px solid #000;
+          border-radius: 1000px;
+        }
+      }
+    }
+  }
+}
