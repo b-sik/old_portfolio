@@ -26,3 +26,24 @@
 //   window.onscroll = callback;
 //   callback();
 // });
+
+//***********************/
+// Keep/remove :hover styling on certificate labels when viewing certificates
+const certLabels = document.querySelectorAll('.certificate__label');
+
+certLabels.forEach((label) => {
+  label.addEventListener('click', () => {
+    // determine which label is clicked
+    let checkboxId = label.attributes.for.value;
+    // select associated checkbox input
+    let checkbox = document.getElementById(checkboxId);
+    // checks if checkbox is checked before it changes boolean value upon click, therefore styling applying when false
+    if (checkbox.checked == false) {
+      label.style.backgroundPosition = '100%';
+      label.style.color = '#fff';
+    } else if (checkbox.checked == true) {
+      label.style.removeProperty('background-position');
+      label.style.removeProperty('color');
+    }
+  });
+});
