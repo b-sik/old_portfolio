@@ -14,7 +14,7 @@ body {
   font-family: 'Roboto', sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end hundred-days-start] min-content [hundred-days-end certifications-start] minmax(120vh, min-content) [certifications-end]; }
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end hundred-days-start] min-content [hundred-days-end certifications-start] minmax(150vh, min-content) [certifications-end]; }
 
 .nav {
   grid-column: 1 / -1;
@@ -100,7 +100,8 @@ body {
 .certificate {
   width: 100%;
   text-align: center;
-  font-size: 2rem; }
+  font-size: 2rem;
+  backface-visibility: hidden; }
   .certificate__label {
     cursor: pointer;
     width: 100%;
@@ -134,7 +135,12 @@ body {
       .certificate__info--link img {
         height: auto;
         width: 100%;
-        max-height: 40rem; }
+        max-height: 40rem;
+        margin-left: 1rem;
+        transition: all 0.2s; }
+        .certificate__info--link img:hover {
+          transform: scale(1.01);
+          box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.25); }
     .certificate__info--skills {
       height: 100%;
       display: flex;
@@ -146,35 +152,38 @@ body {
         list-style: none;
         justify-content: space-around;
         width: 80%; }
-      .certificate__info--skills .tech-icon i {
-        font-size: 5rem; }
       .certificate__info--skills .tech-icon:hover {
         transform: none; }
-      .certificate__info--skills .skills-other-list {
+      .certificate__info--skills .other-skill {
+        height: 100%;
+        max-width: 4rem;
         display: flex;
-        list-style: none;
-        justify-content: space-around;
-        width: 80%; }
-        .certificate__info--skills .skills-other-list i {
-          margin-right: 1rem; }
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        font-size: 1.2rem; }
+        .certificate__info--skills .other-skill i {
+          font-size: 2rem; }
     .certificate__info--projects {
       height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: space-evenly; }
+      .certificate__info--projects h3 {
+        margin-bottom: 1rem; }
       .certificate__info--projects ul {
         display: flex;
         list-style: none;
         justify-content: space-around;
         flex-wrap: wrap;
         width: 80%;
-        font-size: 2rem; }
+        font-size: 1.4rem; }
         .certificate__info--projects ul li {
-          margin: 0.5rem 0;
-          padding: 0.5rem 1rem;
-          border: 1px solid #000;
-          border-radius: 1000px; }
+          padding: 0.5rem 1rem; }
+          .certificate__info--projects ul li i {
+            margin-right: 1rem; }
 
 .tech-icon-list {
   display: flex;
