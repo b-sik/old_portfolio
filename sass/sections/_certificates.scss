@@ -1,10 +1,12 @@
 .certifications {
   grid-row: certifications-start / certifications-end;
   grid-column: 1 / -1;
+  row-gap: 20vh;
 
   background-image: linear-gradient(rgba(peru, 0.9), rgba(peru, 0.9)),
     url(/img/birch-bg.jpg);
   background-size: cover;
+  background-position: center;
 
   transform: skewY(-4deg);
 

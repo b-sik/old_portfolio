@@ -37,13 +37,17 @@ certLabels.forEach((label) => {
     let checkboxId = label.attributes.for.value;
     // select associated checkbox input
     let checkbox = document.getElementById(checkboxId);
-    // checks if checkbox is checked before it changes boolean value upon click, therefore styling applying when false
+    // grab min || max icon
+    let icon = document.getElementById(`icon-${checkboxId}`);
+    // checks if drawer is open or not
     if (checkbox.checked == false) {
       label.style.backgroundPosition = '100%';
       label.style.color = '#fff';
+      icon.className = 'fas fa-window-minimize';
     } else if (checkbox.checked == true) {
       label.style.removeProperty('background-position');
       label.style.removeProperty('color');
+      icon.className = 'far fa-window-maximize';
     }
   });
 });
