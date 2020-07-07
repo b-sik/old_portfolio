@@ -18,27 +18,3 @@
     transform: rotate(360deg);
   }
 }
-
-@keyframes pulse {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-1px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-@keyframes pulse-min {
-  0% {
-    transform: translateY(0px) rotate(180deg);
-  }
-  50% {
-    transform: translateY(-1px) rotate(180deg);
-  }
-  100% {
-    transform: translateY(0px) rotate(180deg);
-  }
-}

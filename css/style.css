@@ -58,22 +58,6 @@ body {
   100% {
     transform: rotate(360deg); } }
 
-@keyframes pulse {
-  0% {
-    transform: translateY(0); }
-  50% {
-    transform: translateY(-1px); }
-  100% {
-    transform: translateY(0); } }
-
-@keyframes pulse-min {
-  0% {
-    transform: translateY(0px) rotate(180deg); }
-  50% {
-    transform: translateY(-1px) rotate(180deg); }
-  100% {
-    transform: translateY(0px) rotate(180deg); } }
-
 .card {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
@@ -139,19 +123,14 @@ body {
       grid-column: 2 / -1;
       justify-self: end;
       color: #fff;
-      margin-right: 2rem; }
-      .certificate__label i.fa-window-maximize:hover {
-        animation-name: pulse;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite; }
+      margin-right: 2rem;
+      transition: transform 0.2s; }
+      .certificate__label i:hover {
+        transform: scale(1.1); }
       .certificate__label i.fa-window-minimize {
         transform: rotate(180deg); }
         .certificate__label i.fa-window-minimize:hover {
-          animation-name: pulse-min;
-          animation-duration: 1s;
-          animation-timing-function: ease-in-out;
-          animation-iteration-count: infinite; }
+          transform: rotate(180deg) scale(1.1); }
     .certificate__label:hover {
       background-position: 100%;
       color: #fff; }
@@ -230,10 +209,6 @@ body {
           padding: 0.5rem 1rem; }
           .certificate__info--projects ul li i {
             margin-right: 1rem; }
-
-.clicked {
-  background-position: 100% !important;
-  color: #fff !important; }
 
 .tech-icon-list {
   display: flex;

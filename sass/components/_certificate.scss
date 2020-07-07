@@ -37,21 +37,17 @@
 
       margin-right: 2rem;
 
-      &.fa-window-maximize:hover {
-        animation-name: pulse;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-        animation-iteration-count: infinite;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
       }
 
       &.fa-window-minimize {
         transform: rotate(180deg);
 
         &:hover {
-          animation-name: pulse-min;
-          animation-duration: 1s;
-          animation-timing-function: ease-in-out;
-          animation-iteration-count: infinite;
+          transform: rotate(180deg) scale(1.1);
         }
       }
     }
@@ -183,9 +179,4 @@
       }
     }
   }
-}
-
-.clicked {
-  background-position: 100% !important;
-  color: #fff !important;
 }
