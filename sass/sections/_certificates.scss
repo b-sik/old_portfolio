@@ -3,10 +3,10 @@
   grid-column: 1 / -1;
   row-gap: 20vh;
 
-  background-image: linear-gradient(rgba(peru, 0.9), rgba(peru, 0.9)),
+  background-image: linear-gradient(rgba(peru, 0.9), rgba(peru, 0.95)),
     url(/img/birch-bg.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
 
   transform: skewY(-4deg);
 

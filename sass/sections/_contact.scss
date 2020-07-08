@@ -1,0 +1,213 @@
+.contact {
+  grid-row: contact-start / contact-end;
+  grid-column: 1 / -1;
+
+  z-index: 10;
+
+  border-top: 3px solid #000;
+
+  margin-top: -5rem;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: min-content 0.5fr 50% 1fr min-content;
+
+  &__header {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(205, 91, 91, 0.9);
+    color: #fff;
+
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 3rem;
+
+    & i {
+      margin-left: 1rem;
+      font-size: 4rem;
+    }
+  }
+
+  &__left {
+    grid-row: 2 / 4;
+    grid-column: 1 / 7;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    justify-items: center;
+    align-content: center;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    // extra content divs needed so parent divs can stretch full size to give translucent white background over the parallax image bg
+
+    &--content {
+      grid-column: 2 / 6;
+      width: 100%;
+
+      display: grid;
+      grid-template-columns: min-content 1fr;
+      row-gap: 2rem;
+      column-gap: 2rem;
+      align-items: center;
+
+      & .fa-envelope {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      & .email {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+
+        font-size: 2.5rem;
+      }
+
+      & .fa-file {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+
+        font-size: 2rem;
+        text-align: center;
+      }
+
+      & .resume {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+
+        font-size: 2.5rem;
+      }
+
+      & form {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+
+        display: flex;
+        flex-direction: column;
+
+        border: 1px solid black;
+        border-radius: 3px;
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__divider {
+    grid-row: 2 / 4;
+    grid-column: 6 / 7;
+
+    border-right: 2px solid black;
+    height: 75%;
+
+    justify-self: end;
+    align-self: center;
+    transform: translateX(1px);
+  }
+
+  &__right {
+    grid-row: 2 / 4;
+    grid-column: 7 / 13;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    justify-items: center;
+    align-items: center;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    // extra content divs needed so parent divs can stretch full size to give translucent white background over the parallax image bg
+
+    & .contact-content-right {
+      grid-column: 2 / 6;
+
+      display: grid;
+      grid-template-rows: repeat(3, min-content);
+      row-gap: 3rem;
+
+      &__link {
+        display: flex;
+        align-items: center;
+
+        font-size: 2rem;
+
+        & i {
+          margin-right: 1rem;
+        }
+      }
+
+      &__icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        & h4 {
+          font-size: 1.4rem;
+        }
+
+        ul {
+          margin-top: 1rem;
+
+          display: flex;
+          justify-content: space-between;
+
+          width: 100%;
+        }
+
+        & h4 {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &__description {
+    grid-row: 4 / 5;
+    grid-column: 1 / -1;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.8rem;
+
+    &--box {
+      width: 100%;
+
+      & p {
+        padding: 0.5rem;
+        text-align: center;
+      }
+    }
+  }
+
+  &__bottom {
+    grid-row: 5 / 6;
+    grid-column: 1 / -1;
+
+    width: 100%;
+
+    background-color: rgba(255, 255, 255, 0.5);
+
+    & p {
+      text-align: center;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.8);
+
+      padding: 0.5rem 0;
+    }
+  }
+}

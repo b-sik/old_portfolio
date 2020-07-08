@@ -21,8 +21,6 @@ body {
       100vh,
       min-content
     )
-    [projects-end hundred-days-start]
-    min-content
-    [hundred-days-end certifications-start] minmax(100vh, min-content)
-    [certifications-end];
+    [projects-end certifications-start] minmax(100vh, min-content)
+    [certifications-end contact-start] 70vh [contact-end];
 }
