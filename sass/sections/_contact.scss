@@ -37,6 +37,17 @@
 
     background-color: var(--contact-bg-overlay);
 
+    & h3 {
+      grid-row: 2 / 3;
+      grid-column: 2 / 6;
+
+      justify-self: center;
+      align-self: center;
+
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+
     // extra content divs needed so parent divs can stretch full size to give translucent white background over the parallax image bg
 
     & .contact-content-left {

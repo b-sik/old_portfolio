@@ -397,6 +397,13 @@ body {
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr min-content;
     background-color: var(--contact-bg-overlay); }
+    .contact__left h3 {
+      grid-row: 2 / 3;
+      grid-column: 2 / 6;
+      justify-self: center;
+      align-self: center;
+      font-size: 1.6rem;
+      font-weight: 400; }
     .contact__left .contact-content-left {
       grid-column: 2 / 6;
       grid-row: 3 / 4; }
