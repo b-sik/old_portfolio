@@ -51,3 +51,23 @@ certLabels.forEach((label) => {
     }
   });
 });
+
+let submit = document.getElementById('submit');
+
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
+});
+
+//***********************/
+// Keeps form labels visible after first focusing then unfocusing
+let fields = document.querySelectorAll('.contact-form__field');
+
+fields.forEach((field) => {
+  field.addEventListener('click', () => {
+    let label = field.getElementsByTagName('label');
+    if (label[0] !== undefined) {
+      label[0].style.opacity = 1;
+      label[0].style.transform = 'translateY(0)';
+    }
+  });
+});

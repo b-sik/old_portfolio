@@ -1,0 +1,60 @@
+body {
+  font-family: 'Roboto', sans-serif;
+
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows:
+    [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(
+      100vh,
+      min-content
+    )
+    [projects-end certifications-start] minmax(100vh, min-content)
+    [certifications-end contact-start] calc(100vh - 5rem) [contact-end];
+}
+
+.header {
+  grid-column: 3 / 11;
+  grid-row: header-start / header-end;
+}
+
+.projects {
+  grid-column: 1 / -1;
+  grid-row: projects-start / projects-end;
+
+  background-image: linear-gradient(
+      var(--projects-bg-overlay),
+      var(--projects-bg-overlay)
+    ),
+    url(/img/forest-bg.jpg);
+  background-size: cover;
+
+  clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0% 100%);
+  margin-top: -3rem;
+}
+
+.certifications {
+  grid-row: certifications-start / certifications-end;
+  grid-column: 1 / -1;
+  row-gap: 20vh;
+
+  background-image: linear-gradient(
+      var(--certifications-bg-overlay),
+      var(--certifications-bg-overlay)
+    ),
+    url(/img/birch-bg.jpg);
+  background-size: cover;
+  background-position: top;
+
+  clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);
+  margin-top: -6rem;
+}
+
+.contact {
+  // bg img in html
+  grid-row: contact-start / contact-end;
+  grid-column: 1 / -1;
+
+  z-index: 10;
+  border-top: 1px solid #000;
+  margin-top: -5rem;
+}

@@ -594,16 +594,49 @@
       </div>
       <div class="contact__left">
         <div class="contact-content-left">
-          <!-- <form action="">
-            <label for="name">Name: </label>
-            <input type="text" form="name" />
-            <label for="subject">Subject: </label>
-            <input type="text" form="subject" />
-            <label for="email">Email: </label>
-            <input type="text" form="email" />
-            <label for="Message">Message: </label>
-            <input type="text" form="message" />
-          </form> -->
+          <form class="contact-form" action="">
+            <div class="contact-form__field">
+              <label for="name">
+                <i class="far fa-user"></i>&nbsp;&nbsp;Name</label
+              >
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+              />
+            </div>
+            <div class="contact-form__field">
+              <label for="email"
+                ><i class="far fa-envelope"></i>&nbsp;&nbsp;Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your email"
+              />
+            </div>
+            <div class="contact-form__field">
+              <label for="message"
+                ><i class="fas fa-pen-fancy"></i>&nbsp;&nbsp;Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Your message"
+              ></textarea>
+            </div>
+            <div class="contact-form__field">
+              <input
+                id="submit"
+                class="submit"
+                type="submit"
+                value="Send message!"
+              />
+            </div>
+          </form>
         </div>
       </div>
       <div class="contact__divider"></div>
@@ -649,14 +682,12 @@
           <p>I am based in Buffalo, NY and currently available for hire.</p>
           <p>I am willing to relocate anywhere within the US or Canada.</p>
         </div>
-        
       </div>
       <div class="contact__bottom">
         <p class="copyright">
           Portfolio designed and developed from scratch by Brian Siklinski
           &copy;2020
         </p>
-      </div>
       </div>
     </footer>
 

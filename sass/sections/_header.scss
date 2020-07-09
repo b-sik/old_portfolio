@@ -1,7 +1,4 @@
 .header {
-  grid-column: 3 / 11;
-  grid-row: header-start / header-end;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 1fr min-content 1fr 1fr 1fr;

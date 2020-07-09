@@ -1,0 +1,24 @@
+:root {
+  --nav-btn: rgb(205, 92, 92);
+  --nav-btn-light: rgba(205, 92, 92, 0.8);
+
+  --projects-bg-overlay: rgba(0, 128, 128, 0.8);
+  --certifications-bg-overlay: rgba(205, 133, 63, 0.9);
+  --contact-bg-overlay: rgba(255, 255, 255, 0.5);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}

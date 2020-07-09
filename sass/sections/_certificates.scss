@@ -1,22 +1,7 @@
 .certifications {
-  grid-row: certifications-start / certifications-end;
-  grid-column: 1 / -1;
-  row-gap: 20vh;
-
-  background-image: linear-gradient(rgba(peru, 0.9), rgba(peru, 0.95)),
-    url(/img/birch-bg.jpg);
-  background-size: cover;
-  background-position: top;
-
-  transform: skewY(-4deg);
-
   display: grid;
-  grid-template-rows: 15rem 1fr 15rem;
+  grid-template-rows: 17.5rem 1fr 15rem;
   grid-template-columns: repeat(12, 1fr);
-
-  & > * {
-    transform: skewY(4deg);
-  }
 
   &__description {
     grid-column: -2 / 2;

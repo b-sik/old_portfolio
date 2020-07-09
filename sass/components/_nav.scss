@@ -5,10 +5,13 @@
   display: flex;
   justify-content: flex-end;
 
-  background-color: #cd5c5c;
+  background-color: var(--nav-btn);
 
   font-size: 2rem;
   color: #fff;
+
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 
   & ul {
     display: flex;

@@ -1,21 +1,8 @@
 .projects {
-  grid-column: 1 / -1;
-  grid-row: projects-start / projects-end;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 15rem 1fr 15rem;
+  grid-template-rows: 20rem 1fr 15rem;
   grid-row-gap: 5rem;
-
-  background-image: linear-gradient(rgba(teal, 0.8), rgba(teal, 0.8)),
-    url(/img/forest-bg.jpg);
-  background-size: cover;
-
-  transform: skewY(-4deg);
-
-  & > * {
-    transform: skewY(4deg);
-  }
 
   &__description {
     grid-column: 2 / -2;

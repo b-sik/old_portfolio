@@ -1,16 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
-@import 'base';
-@import 'layout';
-@import 'nav';
-
 @import 'abstracts/animations';
+
+@import 'base/base';
+@import 'base/layout';
 
 @import 'components/card';
 @import 'components/certificate';
+@import 'components/form';
+@import 'components/nav';
 @import 'components/tech-icons';
 
-@import 'sections/100days';
 @import 'sections/certificates';
 @import 'sections/contact';
 @import 'sections/header';
