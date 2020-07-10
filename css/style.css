@@ -191,16 +191,12 @@ body {
         transform: none; }
       .certificate__info--skills .other-skill {
         height: 100%;
-        max-width: 4rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
         text-align: center;
-        font-size: 1.2rem; }
+        font-size: 1.2rem;
+        display: grid;
+        justify-items: center; }
         .certificate__info--skills .other-skill i {
-          font-size: 2rem;
-          justify-self: flex-start; }
+          font-size: 2rem; }
     .certificate__info--projects {
       height: 100%;
       display: flex;
@@ -217,9 +213,34 @@ body {
         width: 80%;
         font-size: 1.4rem; }
         .certificate__info--projects ul li {
-          padding: 0.5rem 1rem; }
+          padding: 0.5rem 1rem;
+          display: flex;
+          cursor: default; }
+          .certificate__info--projects ul li a {
+            display: flex;
+            text-decoration: none;
+            transition: all 0.3s; }
+            .certificate__info--projects ul li a:link, .certificate__info--projects ul li a:visited, .certificate__info--projects ul li a:active {
+              color: #000; }
+            .certificate__info--projects ul li a p {
+              display: flex;
+              flex-direction: column; }
+              .certificate__info--projects ul li a p::after {
+                content: '';
+                align-self: center;
+                display: block;
+                width: 0;
+                border-top: 1px solid black;
+                transition: all 0.3s; }
+            .certificate__info--projects ul li a:hover {
+              transform: scale(1.1); }
+              .certificate__info--projects ul li a:hover p::after {
+                width: 98%; }
           .certificate__info--projects ul li i {
-            margin-right: 1rem; }
+            margin-right: 1rem;
+            color: #000; }
+          .certificate__info--projects ul li .icon-link {
+            color: darkblue; }
 
 .contact-form {
   display: flex;
@@ -263,10 +284,16 @@ body {
     .contact-form__field .submit {
       border: 1px solid black;
       color: #fff;
-      background-color: var(--nav-btn-light); }
+      background-color: var(--nav-btn-light);
+      transition: all 0.1s; }
       .contact-form__field .submit:hover {
         cursor: pointer;
         background-color: var(--nav-btn); }
+      .contact-form__field .submit:active {
+        border: 1px solid black;
+        transform: translateY(1px); }
+      .contact-form__field .submit:focus {
+        border: 1px solid black; }
 
 .nav {
   grid-column: 1 / -1;
@@ -275,9 +302,7 @@ body {
   justify-content: flex-end;
   background-color: var(--nav-btn);
   font-size: 2rem;
-  color: #fff;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black; }
+  color: #fff; }
   .nav ul {
     display: flex;
     align-items: center;
@@ -380,13 +405,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--nav-btn-light);
+    background-color: var(--nav-btn);
     color: #fff;
     width: 100%;
     padding: 1rem 0;
     text-align: center;
-    font-size: 3rem;
-    border-bottom: 1px solid black; }
+    font-size: 3rem; }
     .contact__header i {
       margin-left: 1rem;
       font-size: 4rem; }
@@ -414,7 +438,8 @@ body {
     height: 75%;
     justify-self: end;
     align-self: center;
-    transform: translateX(1px); }
+    transform: translateX(1px);
+    margin-top: 5rem; }
   .contact__right {
     grid-row: 2 / 4;
     grid-column: 7 / 13;
@@ -427,17 +452,39 @@ body {
       grid-column: 2 / 6;
       display: grid;
       grid-template-rows: repeat(3, min-content);
-      row-gap: 3rem; }
+      row-gap: 3rem;
+      margin-top: 5rem; }
       .contact__right .contact-content-right__link {
         display: flex;
         align-items: center;
-        font-size: 2rem; }
+        font-size: 2rem;
+        transition: all 0.3s; }
+        .contact__right .contact-content-right__link p {
+          cursor: pointer;
+          display: flex;
+          flex-direction: column; }
+          .contact__right .contact-content-right__link p::after {
+            content: '';
+            align-self: center;
+            display: block;
+            width: 0;
+            border-top: 1px solid black;
+            transition: all 0.3s; }
+        .contact__right .contact-content-right__link:hover {
+          transform: scale(1.1); }
+          .contact__right .contact-content-right__link:hover p::after {
+            width: 98%; }
         .contact__right .contact-content-right__link i {
           margin-right: 1rem; }
       .contact__right .contact-content-right__icons {
         display: flex;
         flex-direction: column;
         align-items: center; }
+        .contact__right .contact-content-right__icons a:link, .contact__right .contact-content-right__icons a:visited, .contact__right .contact-content-right__icons a:active {
+          color: #000;
+          text-decoration: none; }
+        .contact__right .contact-content-right__icons figure {
+          cursor: pointer; }
         .contact__right .contact-content-right__icons h4 {
           font-size: 1.4rem; }
         .contact__right .contact-content-right__icons ul {

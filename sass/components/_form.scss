@@ -68,9 +68,21 @@
       color: #fff;
       background-color: var(--nav-btn-light);
 
+      transition: all 0.1s;
+
       &:hover {
         cursor: pointer;
         background-color: var(--nav-btn);
+      }
+
+      &:active {
+        border: 1px solid black;
+
+        transform: translateY(1px);
+      }
+
+      &:focus {
+        border: 1px solid black;
       }
     }
   }

@@ -11,15 +11,13 @@
     align-items: center;
     justify-content: center;
 
-    background-color: var(--nav-btn-light);
+    background-color: var(--nav-btn);
     color: #fff;
 
     width: 100%;
     padding: 1rem 0;
     text-align: center;
     font-size: 3rem;
-
-    border-bottom: 1px solid black;
 
     & i {
       margin-left: 1rem;
@@ -66,6 +64,8 @@
     justify-self: end;
     align-self: center;
     transform: translateX(1px);
+
+    margin-top: 5rem;
   }
 
   &__right {
@@ -89,11 +89,41 @@
       grid-template-rows: repeat(3, min-content);
       row-gap: 3rem;
 
+      margin-top: 5rem;
+
       &__link {
         display: flex;
         align-items: center;
 
         font-size: 2rem;
+
+        transition: all 0.3s;
+
+        & p {
+          cursor: pointer;
+
+          display: flex;
+          flex-direction: column;
+
+          &::after {
+            content: '';
+
+            align-self: center;
+            display: block;
+            width: 0;
+            border-top: 1px solid rgb(0, 0, 0);
+
+            transition: all 0.3s;
+          }
+        }
+
+        &:hover {
+          transform: scale(1.1);
+
+          & p::after {
+            width: 98%;
+          }
+        }
 
         & i {
           margin-right: 1rem;
@@ -104,6 +134,19 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        & a {
+          &:link,
+          &:visited,
+          &:active {
+            color: #000;
+            text-decoration: none;
+          }
+        }
+
+        & figure {
+          cursor: pointer;
+        }
 
         & h4 {
           font-size: 1.4rem;
