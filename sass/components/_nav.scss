@@ -45,3 +45,70 @@
     }
   }
 }
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-size: 2.5rem;
+
+  margin-left: 1.5rem;
+
+  z-index: 99999;
+
+  & ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    & li:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+
+    & .side-nav__link {
+      position: relative;
+
+      & i {
+        font-size: 2.75rem;
+      }
+
+      & span {
+        opacity: 0;
+        font-size: 1.4rem;
+
+        position: absolute;
+        left: 1.5rem;
+        top: 1rem;
+
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 2px 5px;
+        border-radius: 3px;
+
+        transition: all 0.2s;
+      }
+
+      &:link,
+      &:visited {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+
+        transition: all 0.2s;
+
+        &:hover {
+          color: #fff;
+          transform: scale(1.1);
+        }
+
+        &:hover span {
+          opacity: 1;
+
+          z-index: 9999999999999999;
+        }
+      }
+    }
+  }
+}

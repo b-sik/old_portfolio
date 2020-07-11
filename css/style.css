@@ -31,7 +31,8 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  position: relative; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -322,6 +323,46 @@ body {
         color: #fff; }
         .nav ul li a:link i, .nav ul li a:visited i, .nav ul li a:active i {
           margin-right: 1rem; }
+
+.side-nav {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
+  margin-left: 1.5rem;
+  z-index: 99999; }
+  .side-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .side-nav ul li:not(:last-child) {
+      margin-bottom: 3rem; }
+    .side-nav ul .side-nav__link {
+      position: relative; }
+      .side-nav ul .side-nav__link i {
+        font-size: 2.75rem; }
+      .side-nav ul .side-nav__link span {
+        opacity: 0;
+        font-size: 1.4rem;
+        position: absolute;
+        left: 1.5rem;
+        top: 1rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 2px 5px;
+        border-radius: 3px;
+        transition: all 0.2s; }
+      .side-nav ul .side-nav__link:link, .side-nav ul .side-nav__link:visited {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+        transition: all 0.2s; }
+        .side-nav ul .side-nav__link:link:hover, .side-nav ul .side-nav__link:visited:hover {
+          color: #fff;
+          transform: scale(1.1); }
+        .side-nav ul .side-nav__link:link:hover span, .side-nav ul .side-nav__link:visited:hover span {
+          opacity: 1;
+          z-index: 9999999999999999; }
 
 .tech-icon-list {
   display: flex;
