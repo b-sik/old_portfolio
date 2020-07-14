@@ -10,6 +10,10 @@
   font-size: 2rem;
   color: #fff;
 
+  @include respond(tab-port) {
+    justify-content: stretch;
+  }
+
   & ul {
     display: flex;
     align-items: center;
@@ -17,6 +21,13 @@
     height: 100%;
     list-style: none;
     margin-right: 2rem;
+
+    @include respond(tab-port) {
+      margin-right: 0;
+      width: 100%;
+
+      justify-content: space-evenly;
+    }
 
     & li {
       display: flex;

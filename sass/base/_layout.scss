@@ -18,6 +18,14 @@ body {
 
   position: relative;
   z-index: 50;
+
+  @include respond(tab-land) {
+    grid-column: 2 / 12;
+  }
+
+  @include respond(tab-port) {
+    grid-column: 1 / -1;
+  }
 }
 
 .projects {
