@@ -18,7 +18,7 @@
   --nav-btn-light: rgba(205, 92, 92, 0.8);
   --projects-bg-overlay: rgba(0, 128, 128, 0.8);
   --certifications-bg-overlay: rgba(205, 133, 63, 0.9);
-  --contact-bg-overlay: rgba(255, 255, 255, 0.5); }
+  --contact-bg-overlay: rgba(255, 255, 255, 0.7); }
 
 *,
 *::before,
@@ -42,7 +42,9 @@ body {
 
 .header {
   grid-column: 3 / 11;
-  grid-row: header-start / header-end; }
+  grid-row: header-start / header-end;
+  position: relative;
+  z-index: 50; }
 
 .projects {
   grid-column: 1 / -1;
@@ -50,7 +52,8 @@ body {
   background-image: linear-gradient(var(--projects-bg-overlay), var(--projects-bg-overlay)), url(/img/forest-bg.jpg);
   background-size: cover;
   clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0% 100%);
-  margin-top: -3rem; }
+  margin-top: -3rem;
+  z-index: 40; }
 
 .certifications {
   grid-row: certifications-start / certifications-end;
@@ -60,12 +63,13 @@ body {
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);
-  margin-top: -6rem; }
+  margin-top: -6rem;
+  z-index: 40; }
 
 .contact {
   grid-row: contact-start / contact-end;
   grid-column: 1 / -1;
-  z-index: 10;
+  z-index: 50;
   border-top: 1px solid #000;
   margin-top: -5rem; }
 
@@ -268,7 +272,7 @@ body {
       margin-bottom: 1rem;
       padding: 1rem;
       font-size: inherit;
-      background-color: rgba(255, 255, 255, 0.5);
+      background-color: rgba(255, 255, 255, 0.6);
       border-radius: 3px;
       border: 1px solid black;
       transition: all 0.2s; }
@@ -330,6 +334,7 @@ body {
   transform: translateY(-50%);
   font-size: 2.5rem;
   margin-left: 1.5rem;
+  display: none;
   z-index: 99999; }
   .side-nav ul {
     list-style: none;
@@ -337,6 +342,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center; }
+    .side-nav ul li:hover i {
+      color: #fff;
+      transform: scale(1.1); }
     .side-nav ul li:not(:last-child) {
       margin-bottom: 3rem; }
     .side-nav ul .side-nav__link {
@@ -354,15 +362,22 @@ body {
         border-radius: 3px;
         transition: all 0.2s; }
       .side-nav ul .side-nav__link:link, .side-nav ul .side-nav__link:visited {
-        color: rgba(255, 255, 255, 0.7);
+        color: rgba(255, 255, 255, 0.8);
         text-decoration: none;
         transition: all 0.2s; }
-        .side-nav ul .side-nav__link:link:hover, .side-nav ul .side-nav__link:visited:hover {
-          color: #fff;
-          transform: scale(1.1); }
-        .side-nav ul .side-nav__link:link:hover span, .side-nav ul .side-nav__link:visited:hover span {
-          opacity: 1;
-          z-index: 9999999999999999; }
+      .side-nav ul .side-nav__link:hover span {
+        opacity: 1;
+        z-index: 9999999999999999; }
+
+.visible {
+  display: block; }
+
+#sidebar-observer-pixel {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  top: 30vh;
+  left: 0; }
 
 .tech-icon-list {
   display: flex;

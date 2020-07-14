@@ -71,3 +71,20 @@ fields.forEach((field) => {
     }
   });
 });
+
+//***********************/
+// Make sidebar visible beyond header - avoids seeing sidenav labels if hovered
+if (
+  'IntersectionObserver' in window &&
+  'IntersectionObserverEntry' in window &&
+  'intersectionRatio' in window.IntersectionObserverEntry.prototype
+) {
+  let observer = new IntersectionObserver((entries) => {
+    if (entries[0].boundingClientRect.y < 0) {
+      document.getElementById('side-nav').classList.add('visible');
+    } else {
+      document.getElementById('side-nav').classList.remove('visible');
+    }
+  });
+  observer.observe(document.querySelector('#sidebar-observer-pixel'));
+}
