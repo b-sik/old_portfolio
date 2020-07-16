@@ -10,7 +10,7 @@
   font-size: 2rem;
   color: #fff;
 
-  @include respond(tab-port) {
+  @include respond(medium) {
     justify-content: stretch;
   }
 
@@ -22,7 +22,7 @@
     list-style: none;
     margin-right: 2rem;
 
-    @include respond(tab-port) {
+    @include respond(medium) {
       margin-right: 0;
       width: 100%;
 

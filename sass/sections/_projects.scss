@@ -13,6 +13,10 @@
 
     color: #fff;
 
+    @include respond(medium) {
+      grid-column: 3 / -3;
+    }
+
     & i {
       font-size: 4rem;
       margin-right: 1rem;
@@ -35,5 +39,9 @@
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: min-content;
     grid-gap: 10rem;
+
+    @include respond(medium) {
+      grid-column: 3 / -3;
+    }
   }
 }

@@ -39,6 +39,9 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end certifications-start] minmax(100vh, min-content) [certifications-end contact-start] calc(100vh - 5rem) [contact-end]; }
+  @media only screen and (max-width: 45em) {
+    body {
+      grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end certifications-start] minmax(100vh, min-content) [certifications-end contact-start] min-content [contact-end]; } }
 
 .header {
   grid-column: 3 / 11;
@@ -48,7 +51,7 @@ body {
   @media only screen and (max-width: 68.75em) {
     .header {
       grid-column: 2 / 12; } }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 45em) {
     .header {
       grid-column: 1 / -1; } }
 
@@ -123,6 +126,9 @@ body {
   text-align: center;
   font-size: 2rem;
   backface-visibility: hidden; }
+  @media only screen and (max-width: 45em) {
+    .certificate {
+      width: 90%; } }
   .certificate__label {
     cursor: pointer;
     width: 100%;
@@ -187,7 +193,7 @@ body {
         .certificate__info--link {
           grid-column: 1 / 3;
           grid-row: 2 / 3; } }
-      @media only screen and (max-width: 50em) {
+      @media only screen and (max-width: 45em) {
         .certificate__info--link {
           grid-column: 1 / 3;
           grid-row: 3 / 4; } }
@@ -201,7 +207,7 @@ body {
           .certificate__info--link img {
             width: 90%;
             margin-left: 0; } }
-        @media only screen and (max-width: 50em) {
+        @media only screen and (max-width: 45em) {
           .certificate__info--link img {
             width: 90%; } }
         .certificate__info--link img:hover {
@@ -220,7 +226,7 @@ body {
           display: grid;
           grid-template-columns: 95%;
           grid-template-rows: 5rem 1fr; } }
-      @media only screen and (max-width: 50em) {
+      @media only screen and (max-width: 45em) {
         .certificate__info--skills {
           grid-column: 1 / 3;
           grid-row: 1 / 2; } }
@@ -258,7 +264,7 @@ body {
           display: grid;
           grid-template-columns: 95%;
           grid-template-rows: 5rem 1fr; } }
-      @media only screen and (max-width: 50em) {
+      @media only screen and (max-width: 45em) {
         .certificate__info--projects {
           grid-column: 1 / 3;
           grid-row: 2 / 3; } }
@@ -307,28 +313,28 @@ body {
           .certificate__info--projects ul li .icon-link {
             color: darkblue; }
 
-.contact-form {
+.form {
   display: flex;
   flex-direction: column;
   font-size: 1.4rem;
   font-family: inherit; }
-  .contact-form__field {
+  .form__field {
     display: flex;
     flex-direction: column; }
-    .contact-form__field:focus-within label {
+    .form__field:focus-within label {
       transform: translateY(0);
       opacity: 1; }
-    .contact-form__field:focus-within input::placeholder,
-    .contact-form__field:focus-within textarea::placeholder {
+    .form__field:focus-within input::placeholder,
+    .form__field:focus-within textarea::placeholder {
       opacity: 0; }
-    .contact-form__field label {
+    .form__field label {
       margin-bottom: 0.5rem;
       margin-left: 0.5rem;
       transition: all 0.2s;
       transform: translateY(5rem);
       opacity: 0; }
-    .contact-form__field input,
-    .contact-form__field textarea {
+    .form__field input,
+    .form__field textarea {
       margin-bottom: 1rem;
       padding: 1rem;
       font-size: inherit;
@@ -336,28 +342,28 @@ body {
       border-radius: 3px;
       border: 1px solid black;
       transition: all 0.2s; }
-      .contact-form__field input:focus,
-      .contact-form__field textarea:focus {
+      .form__field input:focus,
+      .form__field textarea:focus {
         outline: none;
         border: 2px solid teal; }
-      .contact-form__field input:required:focus,
-      .contact-form__field textarea:required:focus {
+      .form__field input:required:focus,
+      .form__field textarea:required:focus {
         outline: none; }
-    .contact-form__field textarea {
+    .form__field textarea {
       resize: none;
       font-family: inherit; }
-    .contact-form__field .submit {
+    .form__field .submit {
       border: 1px solid black;
       color: #fff;
       background-color: var(--nav-btn-light);
       transition: all 0.1s; }
-      .contact-form__field .submit:hover {
+      .form__field .submit:hover {
         cursor: pointer;
         background-color: var(--nav-btn); }
-      .contact-form__field .submit:active {
+      .form__field .submit:active {
         border: 1px solid black;
         transform: translateY(1px); }
-      .contact-form__field .submit:focus {
+      .form__field .submit:focus {
         border: 1px solid black; }
 
 .nav {
@@ -368,7 +374,7 @@ body {
   background-color: var(--nav-btn);
   font-size: 2rem;
   color: #fff; }
-  @media only screen and (max-width: 50em) {
+  @media only screen and (max-width: 45em) {
     .nav {
       justify-content: stretch; } }
   .nav ul {
@@ -377,7 +383,7 @@ body {
     height: 100%;
     list-style: none;
     margin-right: 2rem; }
-    @media only screen and (max-width: 50em) {
+    @media only screen and (max-width: 45em) {
       .nav ul {
         margin-right: 0;
         width: 100%;
@@ -501,6 +507,9 @@ body {
     display: flex;
     align-items: center;
     color: #fff; }
+    @media only screen and (max-width: 45em) {
+      .certifications__description {
+        grid-column: 3 / -3; } }
     .certifications__description i {
       font-size: 5rem;
       margin-left: 1rem; }
@@ -518,11 +527,17 @@ body {
     justify-content: center;
     align-items: center;
     width: 80vw; }
+    @media only screen and (max-width: 45em) {
+      .certifications .certificates {
+        grid-column: 3 / -3; } }
 
 .contact {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: min-content 0.5fr 50% 1fr min-content; }
+  @media only screen and (max-width: 45em) {
+    .contact {
+      grid-template-rows: repeat(5, min-content); } }
   .contact__header {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -538,23 +553,39 @@ body {
     .contact__header i {
       margin-left: 1rem;
       font-size: 4rem; }
-  .contact__left {
+  .contact__form {
     grid-row: 2 / 4;
     grid-column: 1 / 7;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: 1fr 1fr min-content;
     background-color: var(--contact-bg-overlay); }
-    .contact__left h3 {
+    @media only screen and (max-width: 45em) {
+      .contact__form {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        grid-template-rows: min-content;
+        padding: 5rem 0; } }
+    .contact__form h3 {
       grid-row: 2 / 3;
       grid-column: 2 / 6;
       justify-self: center;
       align-self: center;
       font-size: 1.6rem;
       font-weight: 400; }
-    .contact__left .contact-content-left {
+      @media only screen and (max-width: 45em) {
+        .contact__form h3 {
+          padding: 1rem 2rem;
+          border: 2px solid black;
+          border-radius: 100000px;
+          color: #fff;
+          background-color: var(--projects-bg-overlay); } }
+    .contact__form .contact-content-form {
       grid-column: 2 / 6;
       grid-row: 3 / 4; }
+      @media only screen and (max-width: 45em) {
+        .contact__form .contact-content-form {
+          display: none; } }
   .contact__divider {
     grid-row: 2 / 4;
     grid-column: 6 / 7;
@@ -564,7 +595,18 @@ body {
     align-self: center;
     transform: translateX(1px);
     margin-top: 5rem; }
-  .contact__right {
+    @media only screen and (max-width: 45em) {
+      .contact__divider {
+        grid-row: 2 / 3;
+        grid-column: 1 / -1;
+        justify-self: center;
+        align-self: end;
+        margin-top: 0;
+        height: 0px;
+        width: 60%;
+        border-right: none;
+        border-bottom: 2px solid black; } }
+  .contact__links {
     grid-row: 2 / 4;
     grid-column: 7 / 13;
     display: grid;
@@ -572,51 +614,59 @@ body {
     justify-items: center;
     align-items: center;
     background-color: var(--contact-bg-overlay); }
-    .contact__right .contact-content-right {
+    @media only screen and (max-width: 45em) {
+      .contact__links {
+        grid-row: 3 / 4;
+        grid-column: 1 / -1;
+        padding: 5rem 0; } }
+    .contact__links .contact-content-links {
       grid-column: 2 / 6;
       display: grid;
       grid-template-rows: repeat(3, min-content);
       row-gap: 3rem;
       margin-top: 5rem; }
-      .contact__right .contact-content-right__link {
+      @media only screen and (max-width: 45em) {
+        .contact__links .contact-content-links {
+          margin-bottom: 5rem; } }
+      .contact__links .contact-content-links__link {
         display: flex;
         align-items: center;
         font-size: 2rem;
         transition: all 0.3s; }
-        .contact__right .contact-content-right__link p {
+        .contact__links .contact-content-links__link p {
           cursor: pointer;
           display: flex;
           flex-direction: column; }
-          .contact__right .contact-content-right__link p::after {
+          .contact__links .contact-content-links__link p::after {
             content: '';
             align-self: center;
             display: block;
             width: 0;
             border-top: 1px solid black;
             transition: all 0.3s; }
-        .contact__right .contact-content-right__link:hover {
+        .contact__links .contact-content-links__link:hover {
           transform: scale(1.1); }
-          .contact__right .contact-content-right__link:hover p::after {
+          .contact__links .contact-content-links__link:hover p::after {
             width: 98%; }
-        .contact__right .contact-content-right__link i {
+        .contact__links .contact-content-links__link i {
           margin-right: 1rem; }
-      .contact__right .contact-content-right__icons {
+      .contact__links .contact-content-links__icons {
         display: flex;
         flex-direction: column;
         align-items: center; }
-        .contact__right .contact-content-right__icons a:link, .contact__right .contact-content-right__icons a:visited, .contact__right .contact-content-right__icons a:active {
+        .contact__links .contact-content-links__icons a:link, .contact__links .contact-content-links__icons a:visited, .contact__links .contact-content-links__icons a:active {
           color: #000;
           text-decoration: none; }
-        .contact__right .contact-content-right__icons figure {
+        .contact__links .contact-content-links__icons figure {
           cursor: pointer; }
-        .contact__right .contact-content-right__icons h4 {
+        .contact__links .contact-content-links__icons h4 {
           font-size: 1.4rem; }
-        .contact__right .contact-content-right__icons ul {
+        .contact__links .contact-content-links__icons ul {
           margin-top: 1rem;
           display: flex;
           justify-content: space-between;
           width: 100%; }
-        .contact__right .contact-content-right__icons h4 {
+        .contact__links .contact-content-links__icons h4 {
           margin-bottom: 1rem; }
   .contact__description {
     grid-row: 4 / 5;
@@ -656,11 +706,17 @@ body {
     grid-row-gap: 2rem;
     justify-items: center;
     text-align: center; }
+    @media only screen and (max-width: 68.75em) {
+      .header__left {
+        grid-column: 1 / 10; } }
     .header__left h1 {
       font-weight: 400;
       line-height: 1; }
     .header__left p {
       font-weight: 300; }
+      @media only screen and (max-width: 68.75em) {
+        .header__left p {
+          padding: 0 3rem; } }
   .header__img {
     grid-column: 8 / 12;
     grid-row: 2 / 5;
@@ -713,6 +769,9 @@ body {
     display: flex;
     align-items: center;
     color: #fff; }
+    @media only screen and (max-width: 45em) {
+      .projects__description {
+        grid-column: 3 / -3; } }
     .projects__description i {
       font-size: 4rem;
       margin-right: 1rem; }
@@ -727,3 +786,6 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-template-rows: min-content;
     grid-gap: 10rem; }
+    @media only screen and (max-width: 45em) {
+      .projects__cards {
+        grid-column: 3 / -3; } }

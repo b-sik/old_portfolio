@@ -3,6 +3,10 @@
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: min-content 0.5fr 50% 1fr min-content;
 
+  @include respond(medium) {
+    grid-template-rows: repeat(5, min-content);
+  }
+
   &__header {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -25,7 +29,7 @@
     }
   }
 
-  &__left {
+  &__form {
     grid-row: 2 / 4;
     grid-column: 1 / 7;
 
@@ -34,6 +38,15 @@
     grid-template-rows: 1fr 1fr min-content;
 
     background-color: var(--contact-bg-overlay);
+
+    @include respond(medium) {
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+
+      grid-template-rows: min-content;
+
+      padding: 5rem 0;
+    }
 
     & h3 {
       grid-row: 2 / 3;
@@ -44,13 +57,26 @@
 
       font-size: 1.6rem;
       font-weight: 400;
+
+      @include respond(medium) {
+        padding: 1rem 2rem;
+        border: 2px solid black;
+        border-radius: 100000px;
+        color: #fff;
+
+        background-color: var(--projects-bg-overlay);
+      }
     }
 
     // extra content divs needed so parent divs can stretch full size to give translucent white background over the parallax image bg
 
-    & .contact-content-left {
+    & .contact-content-form {
       grid-column: 2 / 6;
       grid-row: 3 / 4;
+
+      @include respond(medium) {
+        display: none;
+      }
     }
   }
 
@@ -66,9 +92,24 @@
     transform: translateX(1px);
 
     margin-top: 5rem;
+
+    @include respond(medium) {
+      grid-row: 2 / 3;
+      grid-column: 1 / -1;
+
+      justify-self: center;
+      align-self: end;
+
+      margin-top: 0;
+
+      height: 0px;
+      width: 60%;
+      border-right: none;
+      border-bottom: 2px solid black;
+    }
   }
 
-  &__right {
+  &__links {
     grid-row: 2 / 4;
     grid-column: 7 / 13;
 
@@ -80,9 +121,16 @@
 
     background-color: var(--contact-bg-overlay);
 
+    @include respond(medium) {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+
+      padding: 5rem 0;
+    }
+
     // extra content divs needed so parent divs can stretch full size to give translucent white background over the parallax image bg
 
-    & .contact-content-right {
+    & .contact-content-links {
       grid-column: 2 / 6;
 
       display: grid;
@@ -90,6 +138,10 @@
       row-gap: 3rem;
 
       margin-top: 5rem;
+
+      @include respond(medium) {
+        margin-bottom: 5rem;
+      }
 
       &__link {
         display: flex;
@@ -135,6 +187,11 @@
         flex-direction: column;
         align-items: center;
 
+        & li {
+          @include respond(medium) {
+          }
+        }
+
         & a {
           &:link,
           &:visited,
@@ -152,6 +209,7 @@
           font-size: 1.4rem;
         }
 
+        // overwrite .tech-icon-list
         ul {
           margin-top: 1rem;
 

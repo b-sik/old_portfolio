@@ -7,6 +7,10 @@
   // fixes blurry borders on Chrome
   backface-visibility: hidden;
 
+  @include respond(medium) {
+    width: 90%;
+  }
+
   &__label {
     cursor: pointer;
 
@@ -90,7 +94,7 @@
 
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
 
-    @include respond(tab-land) {
+    @include respond(large) {
       grid-template-rows: min-content min-content;
       row-gap: 2rem;
     }
@@ -99,12 +103,12 @@
       grid-column: 1 / 2;
       grid-row: 1 / 3;
 
-      @include respond(tab-land) {
+      @include respond(large) {
         grid-column: 1 / 3;
         grid-row: 2 / 3;
       }
 
-      @include respond(tab-port) {
+      @include respond(medium) {
         grid-column: 1 / 3;
         grid-row: 3 / 4;
       }
@@ -117,13 +121,13 @@
 
         transition: all 0.2s;
 
-        @include respond(tab-land) {
+        @include respond(large) {
           width: 90%;
 
           margin-left: 0;
         }
 
-        @include respond(tab-port) {
+        @include respond(medium) {
           width: 90%;
         }
 
@@ -142,7 +146,7 @@
       align-items: center;
       justify-content: space-evenly;
 
-      @include respond(tab-land) {
+      @include respond(large) {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
 
@@ -151,7 +155,7 @@
         grid-template-rows: 5rem 1fr;
       }
 
-      @include respond(tab-port) {
+      @include respond(medium) {
         grid-column: 1 / 3;
         grid-row: 1 / 2;
       }
@@ -164,7 +168,7 @@
         list-style: none;
         width: 80%;
 
-        @include respond(tab-land) {
+        @include respond(large) {
           width: 100%;
         }
       }
@@ -200,7 +204,7 @@
       align-items: center;
       justify-content: space-evenly;
 
-      @include respond(tab-land) {
+      @include respond(large) {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
 
@@ -209,7 +213,7 @@
         grid-template-rows: 5rem 1fr;
       }
 
-      @include respond(tab-port) {
+      @include respond(medium) {
         grid-column: 1 / 3;
         grid-row: 2 / 3;
       }
@@ -217,7 +221,7 @@
       h3 {
         margin-bottom: 1rem;
 
-        @include respond(tab-land) {
+        @include respond(large) {
           margin-bottom: 0;
         }
       }
@@ -232,7 +236,7 @@
 
         font-size: 1.4rem;
 
-        @include respond(tab-land) {
+        @include respond(large) {
           width: 100%;
         }
 
