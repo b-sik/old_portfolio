@@ -1,6 +1,4 @@
 body {
-  font-family: 'Roboto', sans-serif;
-
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
@@ -10,16 +8,6 @@ body {
     )
     [projects-end certifications-start] minmax(100vh, min-content)
     [certifications-end contact-start] calc(100vh - 5rem) [contact-end];
-
-  @include respond(medium) {
-    grid-template-rows:
-      [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(
-        100vh,
-        min-content
-      )
-      [projects-end certifications-start] minmax(100vh, min-content)
-      [certifications-end contact-start] min-content [contact-end];
-  }
 }
 
 .header {

@@ -29,19 +29,19 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 31.25em) {
+    html {
+      font-size: 50%; } }
 
 body {
   box-sizing: border-box;
-  position: relative; }
+  position: relative;
+  font-family: 'Roboto', sans-serif; }
 
 body {
-  font-family: 'Roboto', sans-serif;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end certifications-start] minmax(100vh, min-content) [certifications-end contact-start] calc(100vh - 5rem) [contact-end]; }
-  @media only screen and (max-width: 45em) {
-    body {
-      grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end certifications-start] minmax(100vh, min-content) [certifications-end contact-start] min-content [contact-end]; } }
 
 .header {
   grid-column: 3 / 11;
@@ -608,7 +608,7 @@ body {
   position: relative; }
   @media only screen and (max-width: 45em) {
     .contact {
-      grid-template-rows: repeat(5, min-content); } }
+      grid-template-rows: 10vh 25vh 40vh 20vh 5vh; } }
   .contact__header {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -777,8 +777,11 @@ body {
     grid-row: 5 / 6;
     grid-column: 1 / -1;
     width: 100%;
-    background-color: var(--contact-bg-overlay); }
+    background-color: var(--contact-bg-overlay);
+    display: flex;
+    align-items: flex-end; }
     .contact__bottom p {
+      width: 100%;
       text-align: center;
       color: #fff;
       background-color: rgba(0, 0, 0, 0.8);

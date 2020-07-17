@@ -6,7 +6,7 @@
   position: relative;
 
   @include respond(medium) {
-    grid-template-rows: repeat(5, min-content);
+    grid-template-rows: 10vh 25vh 40vh 20vh 5vh;
   }
 
   &__header {
@@ -288,10 +288,13 @@
     grid-column: 1 / -1;
 
     width: 100%;
-
     background-color: var(--contact-bg-overlay);
 
+    display: flex;
+    align-items: flex-end;
+
     & p {
+      width: 100%;
       text-align: center;
       color: #fff;
       background-color: rgba(0, 0, 0, 0.8);
