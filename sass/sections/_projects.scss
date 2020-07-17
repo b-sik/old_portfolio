@@ -14,7 +14,7 @@
     color: #fff;
 
     @include respond(medium) {
-      grid-column: 3 / -3;
+      display: none;
     }
 
     & i {
@@ -29,6 +29,42 @@
     & p {
       font-size: 2rem;
       font-weight: 300;
+    }
+  }
+
+  &__description--media {
+    display: none;
+
+    @include respond(medium) {
+      grid-column: 3 / -3;
+      align-self: end;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      color: #fff;
+    }
+
+    & div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      & i {
+        font-size: 3rem;
+        margin-right: 1rem;
+      }
+
+      & h2 {
+        font-size: 4rem;
+      }
+    }
+    & p {
+      font-size: 2rem;
+      font-weight: 300;
+
+      text-align: center;
     }
   }
 

@@ -73,7 +73,7 @@ fields.forEach((field) => {
 });
 
 //***********************/
-// Make sidebar visible beyond header - avoids seeing sidenav labels if hovered
+// Make sidebar visible beyond header section
 if (
   'IntersectionObserver' in window &&
   'IntersectionObserverEntry' in window &&
@@ -90,7 +90,7 @@ if (
 }
 
 //***********************/
-// Make modal visible
+// Modal functionality
 
 const modalBtn = document.getElementById('modal-btn');
 const modalClose = document.getElementById('modal-close');

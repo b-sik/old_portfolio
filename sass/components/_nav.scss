@@ -58,15 +58,15 @@
 }
 
 .side-nav {
+  transition: 1s all;
+  opacity: 0;
+
   position: fixed;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-50%) translateX(-200%);
 
   font-size: 2.5rem;
-
   margin-left: 1.5rem;
-
-  display: none;
 
   z-index: 99999;
 
@@ -79,7 +79,7 @@
     justify-content: center;
 
     & li:hover i {
-      color: #fff;
+      color: #000;
       transform: scale(1.1);
     }
 
@@ -102,7 +102,7 @@
         left: 1.5rem;
         top: 1rem;
 
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(255, 255, 255, 0.9);
         padding: 2px 5px;
         border-radius: 3px;
 
@@ -111,7 +111,7 @@
 
       &:link,
       &:visited {
-        color: rgba(255, 255, 255, 0.8);
+        color: rgba(0, 0, 0, 0.6);
         text-decoration: none;
 
         transition: all 0.2s;
@@ -127,13 +127,14 @@
 }
 
 .visible {
-  display: block;
+  opacity: 1;
+  transform: translateY(-50%) translateX(0);
 }
 
 #sidebar-observer-pixel {
   position: absolute;
   width: 1px;
   height: 1px;
-  top: 30vh;
+  top: 55vh;
   left: 0;
 }

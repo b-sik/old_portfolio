@@ -6,6 +6,10 @@
 
   font-size: 3rem;
 
+  @include respond(medium) {
+    grid-template-rows: 1fr min-content 1fr 1fr;
+  }
+
   &__left {
     grid-column: 2 / 9;
     grid-row: 3 / 4;
@@ -20,6 +24,11 @@
       grid-column: 1 / 10;
     }
 
+    @include respond(medium) {
+      grid-column: 2 / -2;
+      grid-row: 2 / 3;
+    }
+
     & h1 {
       font-weight: 400;
       line-height: 1;
@@ -32,6 +41,27 @@
         padding: 0 3rem;
       }
     }
+
+    & .header__img--media {
+      display: none;
+      height: 15rem;
+      width: 15rem;
+
+      @include respond(medium) {
+        display: block;
+        z-index: -10;
+        position: relative;
+      }
+
+      & img {
+        border-radius: 50%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        filter: sepia(25%) brightness(125%);
+      }
+    }
   }
 
   &__img {
@@ -40,6 +70,10 @@
     z-index: -10;
 
     position: relative;
+
+    @include respond(medium) {
+      display: none;
+    }
 
     &::after {
       content: '';
@@ -75,6 +109,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include respond(medium) {
+      grid-row: 3 / 5;
+    }
 
     & p {
       font-size: 2rem;

@@ -47,7 +47,7 @@
 
       grid-template-rows: min-content;
 
-      padding: 5rem 0;
+      padding: 4rem 0;
     }
 
     & h3 {
@@ -94,7 +94,7 @@
     grid-row: 2 / 4;
     grid-column: 6 / 7;
 
-    border-right: 2px solid black;
+    border-right: 2px solid rgba(0, 0, 0, 0.25);
     height: 75%;
 
     justify-self: end;
@@ -113,9 +113,9 @@
       margin-top: 0;
 
       height: 0px;
-      width: 60%;
+      width: 50%;
       border-right: none;
-      border-bottom: 2px solid black;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.25);
     }
   }
 
@@ -135,7 +135,7 @@
       grid-row: 3 / 4;
       grid-column: 1 / -1;
 
-      padding: 5rem 0;
+      padding: 4rem 0;
     }
 
     // extra content divs needed so parent divs can stretch full size to give translucent white background over the parallax image bg
@@ -236,6 +236,26 @@
     }
   }
 
+  &__divider--media {
+    display: none;
+
+    @include respond(medium) {
+      display: block;
+
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+
+      justify-self: center;
+      align-self: end;
+
+      margin-top: 0;
+
+      height: 0px;
+      width: 50%;
+      border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+    }
+  }
+
   &__description {
     grid-row: 4 / 5;
     grid-column: 1 / -1;
@@ -250,11 +270,11 @@
     font-size: 1.8rem;
 
     @include respond(medium) {
-      padding-bottom: 5rem;
+      padding: 4rem;
     }
 
     &--box {
-      width: 100%;
+      width: 75%;
 
       & p {
         padding: 0.5rem;
