@@ -60,11 +60,12 @@ submit.addEventListener('click', (e) => {
 
 //***********************/
 // Keeps form labels visible after first focusing then unfocusing
-let fields = document.querySelectorAll('.contact-form__field');
+let fields = document.querySelectorAll('.form__field');
 
 fields.forEach((field) => {
   field.addEventListener('click', () => {
     let label = field.getElementsByTagName('label');
+    console.log(label);
     if (label[0] !== undefined) {
       label[0].style.opacity = 1;
       label[0].style.transform = 'translateY(0)';
@@ -88,3 +89,20 @@ if (
   });
   observer.observe(document.querySelector('#sidebar-observer-pixel'));
 }
+
+//***********************/
+// Make modal visible
+
+const modalBtn = document.getElementById('modal-btn');
+const modalClose = document.getElementById('modal-close');
+const modal = document.getElementById('modal');
+
+modalBtn.addEventListener('click', () => {
+  modal.style.transform = 'translateX(0)';
+  modal.style.opacity = '1';
+});
+
+modalClose.addEventListener('click', () => {
+  modal.style.transform = 'translateX(200%)';
+  modal.style.opacity = '0';
+});
