@@ -65,7 +65,6 @@ let fields = document.querySelectorAll('.form__field');
 fields.forEach((field) => {
   field.addEventListener('click', () => {
     let label = field.getElementsByTagName('label');
-    console.log(label);
     if (label[0] !== undefined) {
       label[0].style.opacity = 1;
       label[0].style.transform = 'translateY(0)';
@@ -105,4 +104,11 @@ modalBtn.addEventListener('click', () => {
 modalClose.addEventListener('click', () => {
   modal.style.transform = 'translateX(200%)';
   modal.style.opacity = '0';
+});
+
+modal.addEventListener('click', (e) => {
+  if (e.target.id == 'modal') {
+    modal.style.transform = 'translateX(200%)';
+    modal.style.opacity = '0';
+  }
 });

@@ -250,7 +250,7 @@
     font-size: 1.8rem;
 
     @include respond(medium) {
-      padding: 5rem 0;
+      padding-bottom: 5rem;
     }
 
     &--box {
@@ -277,43 +277,6 @@
       background-color: rgba(0, 0, 0, 0.8);
 
       padding: 0.5rem 0;
-    }
-  }
-
-  &__modal {
-    height: 100vh;
-    width: 100vw;
-
-    position: fixed;
-    top: 0;
-    left: 0;
-
-    display: grid;
-
-    background-color: #fff;
-
-    transition: all 0.5s;
-
-    opacity: 0;
-    transform: translateX(200%);
-
-    & .fa-times-circle {
-      justify-self: end;
-
-      transform: translate(-3rem, 3rem);
-
-      font-size: 2rem;
-      cursor: pointer;
-    }
-
-    & .form {
-      width: 50%;
-      justify-self: center;
-
-      & label {
-        opacity: 1;
-        transform: translateY(0);
-      }
     }
   }
 }
