@@ -31,11 +31,13 @@ body {
   grid-row: projects-start / projects-end;
 
   background-image: linear-gradient(
+      to bottom,
       var(--projects-bg-overlay),
       var(--projects-bg-overlay)
     ),
     url(../img/forest-bg-reduced.jpg);
   background-size: cover;
+  background-position: center;
 
   clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0% 100%);
   margin-top: -3rem;
@@ -49,6 +51,7 @@ body {
   row-gap: 20vh;
 
   background-image: linear-gradient(
+      to bottom,
       var(--certifications-bg-overlay),
       var(--certifications-bg-overlay)
     ),
