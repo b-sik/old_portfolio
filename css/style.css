@@ -64,6 +64,9 @@ body {
   clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0% 100%);
   margin-top: -3rem;
   z-index: 40; }
+  @media only screen and (max-width: 31.25em) {
+    .projects {
+      background-image: url(../img/forest-bg-reduced.jpg); } }
 
 .certifications {
   grid-row: certifications-start / certifications-end;
@@ -75,6 +78,9 @@ body {
   clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);
   margin-top: -6rem;
   z-index: 40; }
+  @media only screen and (max-width: 31.25em) {
+    .certifications {
+      background-image: url(../img/birch-bg-reduced.jpg); } }
 
 .contact {
   grid-row: contact-start / contact-end;
