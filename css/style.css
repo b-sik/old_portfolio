@@ -17,7 +17,9 @@
   --nav-btn: rgb(205, 92, 92);
   --nav-btn-light: rgba(205, 92, 92, 0.8);
   --projects-bg-overlay: rgba(0, 128, 128, 0.8);
+  --projects-bg-overlay2: rgba(0, 128, 128, 0.75);
   --certifications-bg-overlay: rgba(205, 133, 63, 0.9);
+  --certifications-bg-overlay2: rgba(205, 133, 63, 0.95);
   --contact-bg-overlay: rgba(255, 255, 255, 0.7); }
 
 *,
@@ -58,7 +60,7 @@ body {
 .projects {
   grid-column: 1 / -1;
   grid-row: projects-start / projects-end;
-  background-image: linear-gradient(to bottom, var(--projects-bg-overlay), var(--projects-bg-overlay)), url(../img/forest-bg-reduced.jpg);
+  background-image: linear-gradient(to bottom, var(--projects-bg-overlay), var(--projects-bg-overlay)), url(../img/forest-bg.jpg);
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0% 100%);
@@ -66,13 +68,13 @@ body {
   z-index: 40; }
   @media only screen and (max-width: 31.25em) {
     .projects {
-      background-image: url(../img/forest-bg-reduced.jpg); } }
+      background-image: linear-gradient(to bottom, var(--projects-bg-overlay), var(--projects-bg-overlay2)), url(../img/forest-bg.jpg); } }
 
 .certifications {
   grid-row: certifications-start / certifications-end;
   grid-column: 1 / -1;
   row-gap: 20vh;
-  background-image: linear-gradient(to bottom, var(--certifications-bg-overlay), var(--certifications-bg-overlay)), url(../img/birch-bg-reduced.jpg);
+  background-image: linear-gradient(to bottom, var(--certifications-bg-overlay), var(--certifications-bg-overlay)), url(../img/birch-bg.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);
@@ -80,7 +82,7 @@ body {
   z-index: 40; }
   @media only screen and (max-width: 31.25em) {
     .certifications {
-      background-image: url(../img/birch-bg-reduced.jpg); } }
+      background-image: linear-gradient(to bottom, var(--certifications-bg-overlay), var(--certifications-bg-overlay2)), url(../img/birch-bg.jpg); } }
 
 .contact {
   grid-row: contact-start / contact-end;

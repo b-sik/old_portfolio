@@ -35,7 +35,7 @@ body {
       var(--projects-bg-overlay),
       var(--projects-bg-overlay)
     ),
-    url(../img/forest-bg-reduced.jpg);
+    url(../img/forest-bg.jpg);
   background-size: cover;
   background-position: center;
 
@@ -45,7 +45,12 @@ body {
   z-index: 40;
 
   @include respond(small) {
-    background-image: url(../img/forest-bg-reduced.jpg);
+    background-image: linear-gradient(
+        to bottom,
+        var(--projects-bg-overlay),
+        var(--projects-bg-overlay2)
+      ),
+      url(../img/forest-bg.jpg);
   }
 }
 
@@ -59,7 +64,7 @@ body {
       var(--certifications-bg-overlay),
       var(--certifications-bg-overlay)
     ),
-    url(../img/birch-bg-reduced.jpg);
+    url(../img/birch-bg.jpg);
   background-size: cover;
   background-position: top;
 
@@ -69,7 +74,12 @@ body {
   z-index: 40;
 
   @include respond(small) {
-    background-image: url(../img/birch-bg-reduced.jpg);
+    background-image: linear-gradient(
+        to bottom,
+        var(--certifications-bg-overlay),
+        var(--certifications-bg-overlay2)
+      ),
+      url(../img/birch-bg.jpg);
   }
 }
 
