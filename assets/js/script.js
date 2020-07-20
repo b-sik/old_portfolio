@@ -91,7 +91,6 @@ if (
 
 //***********************/
 // Modal functionality
-
 const modalBtn = document.getElementById('modal-btn');
 const modalClose = document.getElementById('modal-close');
 const modal = document.getElementById('modal');

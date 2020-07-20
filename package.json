@@ -4,15 +4,35 @@
   "description": "Personal Portfolio",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass"
+    "start": "npm-run-all --parallel devserver watch:sass watch:js",
+    "compile:sass": "node-sass assets/sass/main.scss dist/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' dist/css/style.comp.css -o dist/css/style.prefix.css",
+    "compress:css": "node-sass dist/css/style.prefix.css dist/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "babel": "npx babel assets/js/script.js --out-file dist/js/script.babel.js --presets=@babel/env",
+    "uglify": "uglifyjs -o dist/js/script.min.js dist/js/script.babel.js",
+    "build:js": "npm run babel && npm run uglify",
+    "imagemin": "imagemin --out-dir=dist/img assets/img/**/*.{png,jpg,gif} assets/img/*.{png,jpg,gif}",
+    "build": "npm-run-all build:css build:js imagemin",
+    "watch:sass": "node-sass assets/sass/main.scss dist/css/style.css -w",
+    "watch:js": "onchange 'assets/js/*.js' -- npm run build:js"
   },
   "author": "Brian Siklinski",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "autoprefixer": "^9.7.6",
+    "imagemin-cli": "^3.0.0",
     "node-sass": "^4.13.1",
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "postcss-cli": "^7.1.1",
+    "uglify-js": "^3.1.7"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@babel/polyfill": "^7.10.4"
+  }
 }
