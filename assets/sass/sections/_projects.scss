@@ -79,5 +79,9 @@
     @include respond(medium) {
       grid-column: 3 / -3;
     }
+
+    @include respond(small) {
+      grid-gap: 5rem;
+    }
   }
 }

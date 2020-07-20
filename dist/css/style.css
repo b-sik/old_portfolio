@@ -43,7 +43,10 @@ body {
 body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(100vh, min-content) [projects-end certifications-start] minmax(100vh, min-content) [certifications-end contact-start] calc(100vh - 5rem) [contact-end]; }
+  grid-template-rows: [nav-start] 6rem [nav-end header-start] minmax(85vh, min-content) [header-end projects-start] minmax(100vh, min-content) [projects-end certifications-start] minmax(100vh, min-content) [certifications-end contact-start] minmax(calc(100vh - 5rem), min-content) [contact-end]; }
+  @media only screen and (max-width: 31.25em) {
+    body {
+      grid-template-rows: [nav-start] 6rem [nav-end header-start] minmax(85vh, min-content) [header-end projects-start] min-content [projects-end certifications-start] min-content [certifications-end contact-start] minmax(calc(100vh - 5rem), min-content) [contact-end]; } }
 
 .header {
   grid-column: 3 / 11;
@@ -77,6 +80,9 @@ body {
   clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);
   margin-top: -6rem;
   z-index: 40; }
+  @media only screen and (max-width: 31.25em) {
+    .certifications {
+      row-gap: 10vh; } }
 
 .contact {
   grid-row: contact-start / contact-end;
@@ -509,6 +515,9 @@ body {
   justify-content: space-around;
   width: 80%;
   list-style: none; }
+  @media only screen and (max-width: 31.25em) {
+    .tech-icon-list {
+      width: 100%; } }
 
 .tech-icon {
   cursor: default;
@@ -550,6 +559,9 @@ body {
   display: grid;
   grid-template-rows: 17.5rem 1fr 15rem;
   grid-template-columns: repeat(12, 1fr); }
+  @media only screen and (max-width: 31.25em) {
+    .certifications {
+      grid-template-rows: 17.5rem 1fr 10rem; } }
   .certifications__description {
     grid-column: -2 / 2;
     justify-self: end;
@@ -611,7 +623,7 @@ body {
   position: relative; }
   @media only screen and (max-width: 45em) {
     .contact {
-      grid-template-rows: 10vh 25vh 40vh 20vh 5vh; } }
+      grid-template-rows: 10vh 20vh 45vh 20vh 5vh; } }
   .contact__header {
     grid-row: 1 / 2;
     grid-column: 1 / -1;
@@ -640,6 +652,9 @@ body {
         grid-column: 1 / -1;
         grid-template-rows: min-content;
         padding: 4rem 0; } }
+    @media only screen and (max-width: 31.25em) {
+      .contact__form {
+        padding: 1rem 0; } }
     .contact__form h3 {
       grid-row: 2 / 3;
       grid-column: 2 / 6;
@@ -655,6 +670,9 @@ body {
           border-radius: 100000px;
           color: #fff;
           background-color: var(--projects-bg-overlay); } }
+      @media only screen and (max-width: 31.25em) {
+        .contact__form h3 {
+          font-size: 2.4rem; } }
       @media only screen and (max-width: 45em) {
         .contact__form h3:hover {
           background-color: teal; } }
@@ -697,6 +715,9 @@ body {
         grid-row: 3 / 4;
         grid-column: 1 / -1;
         padding: 4rem 0; } }
+    @media only screen and (max-width: 31.25em) {
+      .contact__links {
+        padding: 1rem 0; } }
     .contact__links .contact-content-links {
       grid-column: 2 / 6;
       display: grid;
@@ -711,6 +732,15 @@ body {
         align-items: center;
         font-size: 2rem;
         transition: all 0.3s; }
+        @media only screen and (max-width: 45em) {
+          .contact__links .contact-content-links__link {
+            padding: 1rem 2rem;
+            border: 1px solid black;
+            border-radius: 100000px;
+            background-color: rgba(255, 255, 255, 0.6); } }
+        @media only screen and (max-width: 31.25em) {
+          .contact__links .contact-content-links__link {
+            font-size: 2.4rem; } }
         .contact__links .contact-content-links__link p {
           cursor: pointer;
           display: flex;
@@ -732,20 +762,30 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center; }
+        @media only screen and (max-width: 31.25em) {
+          .contact__links .contact-content-links__icons {
+            margin-top: 1rem; } }
         .contact__links .contact-content-links__icons a:link, .contact__links .contact-content-links__icons a:visited, .contact__links .contact-content-links__icons a:active {
           color: #000;
           text-decoration: none; }
         .contact__links .contact-content-links__icons figure {
           cursor: pointer; }
         .contact__links .contact-content-links__icons h4 {
-          font-size: 1.4rem; }
+          font-size: 1.4rem;
+          margin-bottom: 1rem; }
+          @media only screen and (max-width: 31.25em) {
+            .contact__links .contact-content-links__icons h4 {
+              font-size: 1.8rem; } }
         .contact__links .contact-content-links__icons ul {
           margin-top: 1rem;
           display: flex;
-          justify-content: space-between;
-          width: 100%; }
-        .contact__links .contact-content-links__icons h4 {
-          margin-bottom: 1rem; }
+          justify-content: space-between; }
+          @media only screen and (max-width: 31.25em) {
+            .contact__links .contact-content-links__icons ul .tech-icon i {
+              font-size: 5rem; } }
+          @media only screen and (max-width: 31.25em) {
+            .contact__links .contact-content-links__icons ul .tech-icon figcaption {
+              font-size: 1.2rem; } }
   .contact__divider--media {
     display: none; }
     @media only screen and (max-width: 45em) {
@@ -770,7 +810,11 @@ body {
     font-size: 1.8rem; }
     @media only screen and (max-width: 45em) {
       .contact__description {
-        padding: 4rem; } }
+        padding: 4rem 0; } }
+    @media only screen and (max-width: 31.25em) {
+      .contact__description {
+        font-size: 2rem;
+        padding: 1rem 0; } }
     .contact__description--box {
       width: 75%; }
       .contact__description--box p {
@@ -821,6 +865,9 @@ body {
       @media only screen and (max-width: 68.75em) {
         .header__left p {
           padding: 0 3rem; } }
+      @media only screen and (max-width: 31.25em) {
+        .header__left p {
+          padding: 0; } }
     .header__left .header__img--media {
       display: none;
       height: 15rem;
@@ -938,3 +985,6 @@ body {
     @media only screen and (max-width: 45em) {
       .projects__cards {
         grid-column: 3 / -3; } }
+    @media only screen and (max-width: 31.25em) {
+      .projects__cards {
+        grid-gap: 5rem; } }

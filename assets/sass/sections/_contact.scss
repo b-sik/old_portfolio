@@ -6,7 +6,7 @@
   position: relative;
 
   @include respond(medium) {
-    grid-template-rows: 10vh 25vh 40vh 20vh 5vh;
+    grid-template-rows: 10vh 20vh 45vh 20vh 5vh;
   }
 
   &__header {
@@ -50,6 +50,10 @@
       padding: 4rem 0;
     }
 
+    @include respond(small) {
+      padding: 1rem 0;
+    }
+
     & h3 {
       grid-row: 2 / 3;
       grid-column: 2 / 6;
@@ -69,6 +73,10 @@
         color: #fff;
 
         background-color: var(--projects-bg-overlay);
+      }
+
+      @include respond(small) {
+        font-size: 2.4rem;
       }
 
       &:hover {
@@ -138,6 +146,10 @@
       padding: 4rem 0;
     }
 
+    @include respond(small) {
+      padding: 1rem 0;
+    }
+
     // extra content divs needed so parent divs can stretch full size to give translucent white background over the parallax image bg
 
     & .contact-content-links {
@@ -160,6 +172,17 @@
         font-size: 2rem;
 
         transition: all 0.3s;
+
+        @include respond(medium) {
+          padding: 1rem 2rem;
+          border: 1px solid black;
+          border-radius: 100000px;
+          background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        @include respond(small) {
+          font-size: 2.4rem;
+        }
 
         & p {
           cursor: pointer;
@@ -197,9 +220,8 @@
         flex-direction: column;
         align-items: center;
 
-        & li {
-          @include respond(medium) {
-          }
+        @include respond(small) {
+          margin-top: 1rem;
         }
 
         & a {
@@ -217,6 +239,11 @@
 
         & h4 {
           font-size: 1.4rem;
+          margin-bottom: 1rem;
+
+          @include respond(small) {
+            font-size: 1.8rem;
+          }
         }
 
         // overwrite .tech-icon-list
@@ -226,11 +253,18 @@
           display: flex;
           justify-content: space-between;
 
-          width: 100%;
-        }
-
-        & h4 {
-          margin-bottom: 1rem;
+          & .tech-icon {
+            & i {
+              @include respond(small) {
+                font-size: 5rem;
+              }
+            }
+            & figcaption {
+              @include respond(small) {
+                font-size: 1.2rem;
+              }
+            }
+          }
         }
       }
     }
@@ -270,7 +304,12 @@
     font-size: 1.8rem;
 
     @include respond(medium) {
-      padding: 4rem;
+      padding: 4rem 0;
+    }
+
+    @include respond(small) {
+      font-size: 2rem;
+      padding: 1rem 0;
     }
 
     &--box {

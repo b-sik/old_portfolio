@@ -3,6 +3,10 @@
   grid-template-rows: 17.5rem 1fr 15rem;
   grid-template-columns: repeat(12, 1fr);
 
+  @include respond(small) {
+    grid-template-rows: 17.5rem 1fr 10rem;
+  }
+
   &__description {
     grid-column: -2 / 2;
     justify-self: end;

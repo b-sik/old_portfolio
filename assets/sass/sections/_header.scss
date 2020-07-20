@@ -40,6 +40,10 @@
       @include respond(large) {
         padding: 0 3rem;
       }
+
+      @include respond(small) {
+        padding: 0;
+      }
     }
 
     & .header__img--media {

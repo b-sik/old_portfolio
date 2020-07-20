@@ -2,12 +2,20 @@ body {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows:
-    [nav-start] 6rem [nav-end header-start] 85vh [header-end projects-start] minmax(
-      100vh,
-      min-content
-    )
+    [nav-start] 6rem [nav-end header-start] minmax(85vh, min-content)
+    [header-end projects-start] minmax(100vh, min-content)
     [projects-end certifications-start] minmax(100vh, min-content)
-    [certifications-end contact-start] calc(100vh - 5rem) [contact-end];
+    [certifications-end contact-start] minmax(calc(100vh - 5rem), min-content)
+    [contact-end];
+
+  @include respond(small) {
+    grid-template-rows:
+      [nav-start] 6rem [nav-end header-start] minmax(85vh, min-content)
+      [header-end projects-start] min-content
+      [projects-end certifications-start] min-content
+      [certifications-end contact-start] minmax(calc(100vh - 5rem), min-content)
+      [contact-end];
+  }
 }
 
 .header {
@@ -63,6 +71,10 @@ body {
   margin-top: -6rem;
 
   z-index: 40;
+
+  @include respond(small) {
+    row-gap: 10vh;
+  }
 }
 
 .contact {
