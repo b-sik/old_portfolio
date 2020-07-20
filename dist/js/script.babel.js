@@ -4,7 +4,14 @@
 document.addEventListener('DOMContentLoaded', function () {
   var CLASS_NAME = '.parallax-bg';
   var ATTR_NAME = 'data-bgurl';
-  var SCROLL_SPEED = 0.6;
+  var SCROLL_SPEED;
+
+  if (screen.width < 500) {
+    SCROLL_SPEED = 0.1;
+  } else {
+    SCROLL_SPEED = 0.5;
+  }
+
   var elements = document.querySelectorAll(CLASS_NAME);
   var targets = [];
 
@@ -14,7 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (url) {
       elem.style.backgroundImage = "url('" + url + "')";
-      elem.style.backgroundAttachment = 'fixed';
+
+      if (screen.width < 500) {
+        elem.style.backgroundAttachment = 'scroll';
+      } else {
+        elem.style.backgroundAttachment = 'fixed';
+      }
+
       elem.style.backgroundSize = 'cover';
       targets.push(elem);
     }
