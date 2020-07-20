@@ -60,7 +60,7 @@ body {
 .projects {
   grid-column: 1 / -1;
   grid-row: projects-start / projects-end;
-  background-image: linear-gradient(to bottom, var(--projects-bg-overlay), var(--projects-bg-overlay)), url(img/forest-bg.jpg);
+  background-image: linear-gradient(to bottom, var(--projects-bg-overlay), var(--projects-bg-overlay)), url(../img/forest-bg.jpg);
   background-size: cover;
   background-position: center;
   clip-path: polygon(0 5rem, 100% 0, 100% 100%, 0% 100%);
@@ -71,7 +71,7 @@ body {
   grid-row: certifications-start / certifications-end;
   grid-column: 1 / -1;
   row-gap: 20vh;
-  background-image: linear-gradient(to bottom, var(--certifications-bg-overlay), var(--certifications-bg-overlay)), url(img/birch-bg.jpg);
+  background-image: linear-gradient(to bottom, var(--certifications-bg-overlay), var(--certifications-bg-overlay)), url(../img/birch-bg.jpg);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);
