@@ -35,7 +35,7 @@ body {
       var(--projects-bg-overlay),
       var(--projects-bg-overlay)
     ),
-    url(../img/forest-bg.jpg);
+    url(/dist/img/forest-bg.jpg);
   background-size: cover;
   background-position: center;
 
@@ -55,7 +55,7 @@ body {
       var(--certifications-bg-overlay),
       var(--certifications-bg-overlay)
     ),
-    url(../img/birch-bg.jpg);
+    url(/dist/img/forest-bg.jpg);
   background-size: cover;
   background-position: top;
 
