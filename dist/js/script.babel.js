@@ -59,22 +59,20 @@ certLabels.forEach(function (label) {
       label.style.backgroundPosition = '100%';
       label.style.color = '#fff';
       icon.className = 'fas fa-window-minimize';
+      icon.style.color = '#fff';
     } else if (checkbox.checked == true) {
       label.style.removeProperty('background-position');
       label.style.removeProperty('color');
       icon.className = 'far fa-window-maximize';
+      icon.style.removeProperty('color');
     }
   });
-});
-var submit = document.getElementById('submit');
-submit.addEventListener('click', function (e) {
-  e.preventDefault();
 }); //***********************/
 // Keeps form labels visible after first focusing then unfocusing
 
 var fields = document.querySelectorAll('.form__field');
 fields.forEach(function (field) {
-  field.addEventListener('click', function () {
+  field.addEventListener('focusin', function () {
     var label = field.getElementsByTagName('label');
 
     if (label[0] !== undefined) {

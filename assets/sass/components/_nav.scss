@@ -68,7 +68,7 @@
   font-size: 2.5rem;
   margin-left: 1.5rem;
 
-  z-index: 99999;
+  z-index: 1000;
 
   & ul {
     list-style: none;
@@ -120,7 +120,11 @@
       &:hover span {
         opacity: 1;
 
-        z-index: 9999999999999999;
+        z-index: 1000;
+
+        @media (hover: none) {
+          opacity: 0;
+        }
       }
     }
   }

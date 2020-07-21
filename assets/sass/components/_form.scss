@@ -63,7 +63,12 @@
     }
 
     .submit {
+      margin-bottom: 1rem;
+      padding: 1rem;
+
+      font-size: inherit;
       border: 1px solid black;
+      border-radius: 3px;
 
       color: #fff;
       background-color: var(--nav-btn-light);

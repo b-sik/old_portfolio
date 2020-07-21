@@ -53,18 +53,14 @@ certLabels.forEach((label) => {
       label.style.backgroundPosition = '100%';
       label.style.color = '#fff';
       icon.className = 'fas fa-window-minimize';
+      icon.style.color = '#fff';
     } else if (checkbox.checked == true) {
       label.style.removeProperty('background-position');
       label.style.removeProperty('color');
       icon.className = 'far fa-window-maximize';
+      icon.style.removeProperty('color');
     }
   });
-});
-
-let submit = document.getElementById('submit');
-
-submit.addEventListener('click', (e) => {
-  e.preventDefault();
 });
 
 //***********************/
@@ -72,7 +68,7 @@ submit.addEventListener('click', (e) => {
 let fields = document.querySelectorAll('.form__field');
 
 fields.forEach((field) => {
-  field.addEventListener('click', () => {
+  field.addEventListener('focusin', () => {
     let label = field.getElementsByTagName('label');
     if (label[0] !== undefined) {
       label[0].style.opacity = 1;
