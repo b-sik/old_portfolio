@@ -206,6 +206,13 @@
           }
         }
 
+        &:link,
+        &:visited,
+        &:active {
+          text-decoration: none;
+          color: #000;
+        }
+
         &:hover {
           transform: scale(1.1);
 
