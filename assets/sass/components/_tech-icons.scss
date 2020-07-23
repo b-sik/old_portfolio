@@ -2,13 +2,9 @@
   display: flex;
   justify-content: space-around;
 
-  width: 80%;
+  width: 100%;
 
   list-style: none;
-
-  @include respond(small) {
-    width: 100%;
-  }
 }
 
 .tech-icon {

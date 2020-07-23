@@ -16,6 +16,7 @@
 :root {
   --nav-btn: rgb(205, 92, 92);
   --nav-btn-light: rgba(205, 92, 92, 0.8);
+  --nav-btn-dark: rgb(173, 77, 77);
   --projects-bg-overlay: rgba(0, 128, 128, 0.8);
   --projects-bg-overlay2: rgba(0, 128, 128, 0.75);
   --certifications-bg-overlay: rgba(205, 133, 63, 0.9);
@@ -128,7 +129,7 @@ body {
       color: #fff; }
     .card a:hover {
       cursor: pointer;
-      background-color: var(--nav-btn-light); }
+      background-color: var(--nav-btn-dark); }
 
 .certificate {
   width: 100%;
@@ -522,11 +523,8 @@ body {
 .tech-icon-list {
   display: flex;
   justify-content: space-around;
-  width: 80%;
+  width: 100%;
   list-style: none; }
-  @media only screen and (max-width: 31.25em) {
-    .tech-icon-list {
-      width: 100%; } }
 
 .tech-icon {
   cursor: default;
