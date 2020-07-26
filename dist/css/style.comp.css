@@ -76,7 +76,7 @@ body {
   grid-column: 1 / -1;
   row-gap: 20vh;
   background-image: linear-gradient(to bottom, var(--certifications-bg-overlay), var(--certifications-bg-overlay)), url(/dist/img/birch-bg.jpg);
-  background-size: cover;
+  background-size: fixed;
   background-position: top;
   clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);
   margin-top: -6rem;
