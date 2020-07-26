@@ -59,8 +59,12 @@
         <h1>Hello, I'm Brian!</h1>
         <div class="header__img--media">
           <img
-            src="dist/img/headshot-bw.jpg"
             alt="Black and white portrait of me"
+            srcset="
+              dist/img/headshot-135.jpg 135w,
+              dist/img/headshot-175.jpg 175w
+            "
+            sizes="(max-width: 500px) 135px,(max-width: 720px) 175px"
           />
         </div>
         <p>self-taught web developer experienced&nbsp;in</p>
@@ -111,8 +115,12 @@
       </div>
       <div class="header__img">
         <img
-          src="dist/img/headshot-bw.jpg"
           alt="Black and white portrait of me"
+          srcset="
+            dist/img/headshot-350.jpg 350w,
+            dist/img/headshot-475.jpg 475w
+          "
+          sizes="(max-width: 1100px) 350px,(min-width: 1100px) 475px"
         />
       </div>
       <a href="#projects" class="learn-more">

@@ -895,7 +895,7 @@ body {
         height: 100%;
         object-fit: cover;
         display: block;
-        filter: sepia(15%) brightness(150%); }
+        filter: sepia(15%) brightness(125%); }
   .header__img {
     grid-column: 8 / 12;
     grid-row: 2 / 5;
