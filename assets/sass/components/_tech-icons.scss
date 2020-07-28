@@ -5,6 +5,10 @@
   width: 100%;
 
   list-style: none;
+
+  @include respond(large) {
+    width: 80%;
+  }
 }
 
 .tech-icon {
