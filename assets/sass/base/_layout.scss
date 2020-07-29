@@ -61,10 +61,9 @@ body {
   background-image: linear-gradient(
       to bottom,
       var(--certifications-bg-overlay),
-      var(--certifications-bg-overlay)
+      var(--certifications-bg-overlay2)
     ),
     url(/dist/img/birch-bg.jpg);
-  background-attachment: fixed;
   background-position: top;
 
   clip-path: polygon(0 5rem, 100% 0, 100% calc(100% - 5rem), 0% 100%);

@@ -9,6 +9,10 @@
   @include respond(large) {
     width: 80%;
   }
+
+  @include respond(medium) {
+    width: 95%;
+  }
 }
 
 .tech-icon {
